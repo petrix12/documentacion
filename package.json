@@ -1,0 +1,19 @@
+{
+  "name": "Soluciones++",
+  "version": "0.0.1",
+  "description": "Documentación General",
+  "main": "index.js",
+  "authors": {
+    "name": "Pedro Bazó",
+    "email": "bazo.pedro@gmail.com"
+  },
+  "repository": "https://github.com/petrix12/documentacion.git/Soluciones++",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
