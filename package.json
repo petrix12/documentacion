@@ -1,13 +1,13 @@
 {
-  "name": "Soluciones++",
+  "name": "spp",
   "version": "0.0.1",
   "description": "Documentación General",
   "main": "index.js",
   "authors": {
-    "name": "Pedro Bazó",
+    "name": "Pedro J. Bazó C.",
     "email": "bazo.pedro@gmail.com"
   },
-  "repository": "https://github.com/petrix12/documentacion.git/Soluciones++",
+  "repository": "https://github.com/petrix12/documentacion.git/spp",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"
