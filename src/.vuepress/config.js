@@ -67,8 +67,16 @@ module.exports = {
           title: 'Laravel',
           collapsable: true,
           children: [
+            'laravel/sefar2022/sefar2022-P01',    // Proeycto Sefar 2022
+            'laravel/sefar2022/sefar2022-P02',
+            'laravel/sefar2022/sefar2022-P03',
             'laravel/sefar2021/sefar2021-P01',    // Proeycto Sefar 2021
             'laravel/sefar2021/sefar2021-P02',
+            'laravel/sefar2021/sefar2021-P03',
+            'laravel/sefar2021/sefar2021-P04',
+            'laravel/sefar2021/sefar2021-P05',
+            'laravel/sefar2021/sefar2021-P06',
+            'laravel/sefar2021/sefar2021-P07',
             'laravel/laravel2021/laravel2021'     // Curso Laravel 8 desde cero
           ]
         },

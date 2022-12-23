@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Proyecto App Sefar Universal 2021 (Parte V) | Docs S++</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/petrix12/imagenes2022/main/Soluciones%2B%2B/S%2B%2B.ico">
+    <meta name="description" content="Documentación General">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.73d0500b.css" as="style"><link rel="preload" href="/assets/js/app.651ff1a6.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/18.678266c7.js" as="script"><link rel="prefetch" href="/assets/js/10.48929f7d.js"><link rel="prefetch" href="/assets/js/11.b850dec1.js"><link rel="prefetch" href="/assets/js/12.b1778904.js"><link rel="prefetch" href="/assets/js/13.1c13bdf0.js"><link rel="prefetch" href="/assets/js/14.4786465a.js"><link rel="prefetch" href="/assets/js/15.a1014715.js"><link rel="prefetch" href="/assets/js/16.8aebf0ee.js"><link rel="prefetch" href="/assets/js/17.e2c743fd.js"><link rel="prefetch" href="/assets/js/19.6544444b.js"><link rel="prefetch" href="/assets/js/20.8c9da897.js"><link rel="prefetch" href="/assets/js/21.5c335f29.js"><link rel="prefetch" href="/assets/js/22.8099a5c5.js"><link rel="prefetch" href="/assets/js/23.fd42be68.js"><link rel="prefetch" href="/assets/js/24.277db143.js"><link rel="prefetch" href="/assets/js/25.08cd482a.js"><link rel="prefetch" href="/assets/js/26.ee27954e.js"><link rel="prefetch" href="/assets/js/27.5a607e64.js"><link rel="prefetch" href="/assets/js/28.5f3dc4d3.js"><link rel="prefetch" href="/assets/js/29.ea89b173.js"><link rel="prefetch" href="/assets/js/3.d6737211.js"><link rel="prefetch" href="/assets/js/30.f3d2f5ef.js"><link rel="prefetch" href="/assets/js/31.8c88de61.js"><link rel="prefetch" href="/assets/js/4.832274fd.js"><link rel="prefetch" href="/assets/js/5.e457cf98.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.159f2f50.js"><link rel="prefetch" href="/assets/js/8.a56c0b5d.js"><link rel="prefetch" href="/assets/js/9.6a63ad8e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.73d0500b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Docs S++</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guías
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Doc
+</a></div><div class="nav-item"><a href="https://github.com/petrix12" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Mi GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guías
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Doc
+</a></div><div class="nav-item"><a href="https://github.com/petrix12" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Mi GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Soluciones++</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Laravel</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/laravel/sefar2022/sefar2022-P01.html" class="sidebar-link">Proyecto Sefar 2022 (PARTE I)</a></li><li><a href="/guide/laravel/sefar2022/sefar2022-P02.html" class="sidebar-link">Proyecto Sefar 2022 (PARTE II)</a></li><li><a href="/guide/laravel/sefar2022/sefar2022-P03.html" class="sidebar-link">Proyecto Sefar 2022 (PARTE III)</a></li><li><a href="/guide/laravel/sefar2021/sefar2021-P01.html" class="sidebar-link">Proyecto App Sefar Universal 2021 (Parte I)</a></li><li><a href="/guide/laravel/sefar2021/sefar2021-P02.html" class="sidebar-link">Proyecto App Sefar Universal 2021 (Parte II)</a></li><li><a href="/guide/laravel/sefar2021/sefar2021-P03.html" class="sidebar-link">Proyecto App Sefar Universal 2021 (Parte III)</a></li><li><a href="/guide/laravel/sefar2021/sefar2021-P04.html" class="sidebar-link">Proyecto App Sefar Universal 2021 (Parte IV)</a></li><li><a href="/guide/laravel/sefar2021/sefar2021-P05.html" aria-current="page" class="active sidebar-link">Proyecto App Sefar Universal 2021 (Parte V)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/laravel/sefar2021/sefar2021-P05.html#modulo-traviesoevans" class="sidebar-link">Módulo Traviesoevans</a></li><li class="sidebar-sub-header"><a href="/guide/laravel/sefar2021/sefar2021-P05.html#modulo-patricia-vargas-sequera" class="sidebar-link">Módulo Patricia Vargas Sequera</a></li><li class="sidebar-sub-header"><a href="/guide/laravel/sefar2021/sefar2021-P05.html#modulo-badell-law" class="sidebar-link">Módulo Badell Law</a></li><li class="sidebar-sub-header"><a href="/guide/laravel/sefar2021/sefar2021-P05.html#modulo-p-v-abogados" class="sidebar-link">Módulo P &amp; V Abogados</a></li><li class="sidebar-sub-header"><a href="/guide/laravel/sefar2021/sefar2021-P05.html#modulo-mujica-coto-abogados" class="sidebar-link">Módulo Mujica &amp; Coto Abogados</a></li><li class="sidebar-sub-header"><a href="/guide/laravel/sefar2021/sefar2021-P05.html#modulo-german-fleitas" class="sidebar-link">Módulo German Fleitas</a></li><li class="sidebar-sub-header"><a href="/guide/laravel/sefar2021/sefar2021-P05.html#modulo-soma-consultores" class="sidebar-link">Módulo Soma Consultores</a></li><li class="sidebar-sub-header"><a href="/guide/laravel/sefar2021/sefar2021-P05.html#modulo-mg-tours" class="sidebar-link">Módulo MG Tours</a></li></ul></li><li><a href="/guide/laravel/sefar2021/sefar2021-P06.html" class="sidebar-link">Proyecto App Sefar Universal 2021 (Parte VI)</a></li><li><a href="/guide/laravel/sefar2021/sefar2021-P07.html" class="sidebar-link">Proyecto App Sefar Universal 2021 (Parte VII)</a></li><li><a href="/guide/laravel/laravel2021/laravel2021.html" class="sidebar-link">Curso Laravel 8 desde cero</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>PWA</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="proyecto-app-sefar-universal-2021-parte-v"><a href="#proyecto-app-sefar-universal-2021-parte-v" class="header-anchor">#</a> Proyecto App Sefar Universal 2021 (Parte V)</h1> <ul><li>Versión: <strong>Laravel Framework 8.31.0</strong></li></ul> <h2 id="modulo-traviesoevans"><a href="#modulo-traviesoevans" class="header-anchor">#</a> Módulo Traviesoevans</h2> <ul><li>traviesoevans@gmail.com / sefar2021
+<strong>Tutorial</strong>: https://www.youtube.com/watch?v=Z8Oh2O6GueQ</li></ul> <ol><li>Crear rol <strong>Traviesoevans</strong>.</li> <li>Otorgarle los siguientes permisos al rol <strong>Traviesoevans</strong>:
+<ul><li>genealogista</li> <li>crud.agclientes.index</li> <li>crud.agclientes.create</li> <li>crud.agclientes.edit</li> <li>crud.agclientes.destroy</li> <li>crud.files.index</li> <li>crud.files.create</li> <li>crud.files.edit</li></ul></li> <li>Modificar modelo <strong>app\Models\Agcliente.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">Agcliente</span> <span class="token keyword">extends</span> <span class="token class-name">Model</span>
+<span class="token punctuation">{</span>
+	≡
+	<span class="token comment">// Filtro de búsqueda</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeBuscar</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$search</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para clientes referidos</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeRol</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    	<span class="token comment">// Clientes con el rol Traviesoevans</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Traviesoevans'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token variable">$query</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Travieso Evans'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para ver solo clientes</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeClientes</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$solo_clientes</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar controlador <strong>app\Http\Controllers\TreeController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">TreeController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">tree</span><span class="token punctuation">(</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token comment">// Si el usuario tiene el rol Traviesoevans</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Traviesoevans'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token variable">$autorizado</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Travieso Evans'</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$autorizado</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token variable">$existe</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDPersona'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>store</strong> del controlador <strong>app\Http\Controllers\AgclienteController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">store</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ≡
+    <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">getRoleNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;Traviesoevans&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;Travieso Evans&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// Creando persona en agcliente</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>index</strong> del conrolador <strong>app\Http\Controllers\Controller.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Documentalista'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.miscelaneos.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Traviesoevans'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li></ol> <h2 id="modulo-patricia-vargas-sequera"><a href="#modulo-patricia-vargas-sequera" class="header-anchor">#</a> Módulo Patricia Vargas Sequera</h2> <ol><li>Crear rol <strong>Vargassequera</strong>.</li> <li>Otorgarle los siguientes permisos al rol <strong>Vargassequera</strong>:
+<ul><li>genealogista</li> <li>crud.agclientes.index</li> <li>crud.agclientes.create</li> <li>crud.agclientes.edit</li> <li>crud.agclientes.destroy</li> <li>crud.files.index</li> <li>crud.files.create</li> <li>crud.files.edit</li></ul></li> <li>Modificar modelo <strong>app\Models\Agcliente.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">Agcliente</span> <span class="token keyword">extends</span> <span class="token class-name">Model</span>
+<span class="token punctuation">{</span>
+	≡
+	<span class="token comment">// Filtro de búsqueda</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeBuscar</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$search</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para clientes referidos</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeRol</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    	<span class="token comment">// Clientes con el rol Traviesoevans</span>
+		≡
+		<span class="token comment">// Clientes con el rol Vargassequera</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Vargassequera'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token variable">$query</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Patricia Vargas Sequera'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para ver solo clientes</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeClientes</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$solo_clientes</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar controlador <strong>app\Http\Controllers\TreeController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">TreeController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">tree</span><span class="token punctuation">(</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token comment">// Si el usuario tiene el rol Traviesoevans</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol Vargassequera</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Vargassequera'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token variable">$autorizado</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Patricia Vargas Sequera'</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$autorizado</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token variable">$existe</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDPersona'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>store</strong> del controlador <strong>app\Http\Controllers\AgclienteController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">store</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ≡
+    <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">getRoleNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;Traviesoevans&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;Travieso Evans&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;Vargassequera&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;Patricia Vargas Sequera&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// Creando persona en agcliente</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>index</strong> del conrolador <strong>app\Http\Controllers\Controller.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Traviesoevans'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Vargassequera'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li></ol> <h2 id="modulo-badell-law"><a href="#modulo-badell-law" class="header-anchor">#</a> Módulo Badell Law</h2> <ol><li>Crear rol <strong>BadellLaw</strong>.</li> <li>Otorgarle los siguientes permisos al rol <strong>BadellLaw</strong>:
+<ul><li>genealogista</li> <li>crud.agclientes.index</li> <li>crud.agclientes.create</li> <li>crud.agclientes.edit</li> <li>crud.agclientes.destroy</li> <li>crud.files.index</li> <li>crud.files.create</li> <li>crud.files.edit</li></ul></li> <li>Modificar modelo <strong>app\Models\Agcliente.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">Agcliente</span> <span class="token keyword">extends</span> <span class="token class-name">Model</span>
+<span class="token punctuation">{</span>
+	≡
+	<span class="token comment">// Filtro de búsqueda</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeBuscar</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$search</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para clientes referidos</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeRol</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    	<span class="token comment">// Clientes con el rol Traviesoevans</span>
+		≡
+		<span class="token comment">// Clientes con el rol Badell Law</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'BadellLaw'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token variable">$query</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Badell Law'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para ver solo clientes</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeClientes</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$solo_clientes</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar controlador <strong>app\Http\Controllers\TreeController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">TreeController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">tree</span><span class="token punctuation">(</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token comment">// Si el usuario tiene el rol Traviesoevans</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol BadellLaw</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'BadellLaw'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token variable">$autorizado</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Badell Law'</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$autorizado</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token variable">$existe</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDPersona'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>store</strong> del controlador <strong>app\Http\Controllers\AgclienteController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">store</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;Vargassequera&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;Patricia Vargas Sequera&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;BadellLaw&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;Badell Law&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Creando persona en agcliente</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>index</strong> del conrolador <strong>app\Http\Controllers\Controller.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Vargassequera'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'BadellLaw'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li></ol> <h2 id="modulo-p-v-abogados"><a href="#modulo-p-v-abogados" class="header-anchor">#</a> Módulo P &amp; V Abogados</h2> <ol><li>Crear rol <strong>P&amp;V-Abogados</strong>.</li> <li>Otorgarle los siguientes permisos al rol <strong>P&amp;V-Abogados</strong>:
+<ul><li>genealogista</li> <li>crud.agclientes.index</li> <li>crud.agclientes.create</li> <li>crud.agclientes.edit</li> <li>crud.agclientes.destroy</li> <li>crud.files.index</li> <li>crud.files.create</li> <li>crud.files.edit</li></ul></li> <li>Modificar modelo <strong>app\Models\Agcliente.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">Agcliente</span> <span class="token keyword">extends</span> <span class="token class-name">Model</span>
+<span class="token punctuation">{</span>
+	≡
+	<span class="token comment">// Filtro de búsqueda</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeBuscar</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$search</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para clientes referidos</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeRol</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    	<span class="token comment">// Clientes con el rol Badell Law</span>
+		≡
+		<span class="token comment">// Clientes con el rol P &amp; V Abogados</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'P&amp;V-Abogados'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token variable">$query</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'P &amp; V Abogados'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para ver solo clientes</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeClientes</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$solo_clientes</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar controlador <strong>app\Http\Controllers\TreeController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">TreeController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">tree</span><span class="token punctuation">(</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token comment">// Si el usuario tiene el rol BadellLaw</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol P&amp;V-Abogados</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'P&amp;V-Abogados'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token variable">$autorizado</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'P &amp; V Abogados'</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$autorizado</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token variable">$existe</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDPersona'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>store</strong> del controlador <strong>app\Http\Controllers\AgclienteController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">store</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;BadellLaw&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;Badell Law&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;P&amp;V-Abogados&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;P &amp; V Abogados&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Creando persona en agcliente</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>index</strong> del conrolador <strong>app\Http\Controllers\Controller.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'BadellLaw'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'P&amp;V-Abogados'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar vista <strong>resources\views\auth\register.blade.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+	<span class="token comment">// Captura de parámetros del JotForm</span>
+	≡
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">empty</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token constant">null</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token variable">$referido</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string single-quoted-string">'P'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'P &amp; V Abogados'</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	≡
+<span class="token delimiter important">?&gt;</span></span>
+≡
+</code></pre></div><ul><li><strong>Nota</strong>: solo para casos en que el parámetro <strong>referido</strong> proveniente de <strong>JotForm</strong> contenga el caracter '<strong>&amp;</strong>'.</li></ul></li> <li>Subir cambios a GitHub
+<ul><li>$ git add .</li> <li>$ git commit -m &quot;Módulo P &amp; V Abogados&quot;</li> <li>$ git push -u origin master</li></ul></li></ol> <h2 id="modulo-mujica-coto-abogados"><a href="#modulo-mujica-coto-abogados" class="header-anchor">#</a> Módulo Mujica &amp; Coto Abogados</h2> <ol><li>Crear rol <strong>Mujica-Coto</strong>.</li> <li>Otorgarle los siguientes permisos al rol <strong>Mujica-Coto</strong>:
+<ul><li>genealogista</li> <li>crud.agclientes.index</li> <li>crud.agclientes.create</li> <li>crud.agclientes.edit</li> <li>crud.agclientes.destroy</li> <li>crud.files.index</li> <li>crud.files.create</li> <li>crud.files.edit</li></ul></li> <li>Modificar modelo <strong>app\Models\Agcliente.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">Agcliente</span> <span class="token keyword">extends</span> <span class="token class-name">Model</span>
+<span class="token punctuation">{</span>
+	≡
+	<span class="token comment">// Filtro de búsqueda</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeBuscar</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$search</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para clientes referidos</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeRol</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+    	<span class="token comment">// Clientes con el rol P &amp; V Abogados</span>
+		≡
+		<span class="token comment">// Clientes con el rol Mujica y Coto Abogados</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Mujica-Coto'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token variable">$query</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Mujica y Coto Abogados'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// Filtro para ver solo clientes</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeClientes</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">,</span> <span class="token variable">$solo_clientes</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar controlador <strong>app\Http\Controllers\TreeController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">TreeController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">tree</span><span class="token punctuation">(</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol P&amp;V-Abogados</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol Mujica-Coto</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Mujica-Coto'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token variable">$autorizado</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Mujica y Coto Abogados'</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$autorizado</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token variable">$existe</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDPersona'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>store</strong> del controlador <strong>app\Http\Controllers\AgclienteController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">store</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;P&amp;V-Abogados&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;P &amp; V Abogados&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;Mujica-Coto&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;Mujica y Coto Abogados&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Creando persona en agcliente</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>index</strong> del conrolador <strong>app\Http\Controllers\Controller.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'P&amp;V-Abogados'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Mujica-Coto'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Subir cambios a GitHub
+<ul><li>$ git add .</li> <li>$ git commit -m &quot;Módulo Mujica y Coto Abogados&quot;</li> <li>$ git push -u origin master</li></ul></li></ol> <h2 id="modulo-german-fleitas"><a href="#modulo-german-fleitas" class="header-anchor">#</a> Módulo German Fleitas</h2> <ol><li>Crear rol <strong>German-Fleitas</strong>.</li> <li>Otorgarle los siguientes permisos al rol <strong>German-Fleitas</strong>:
+<ul><li>genealogista</li> <li>crud.agclientes.index</li> <li>crud.agclientes.create</li> <li>crud.agclientes.edit</li> <li>crud.agclientes.destroy</li> <li>crud.files.index</li> <li>crud.files.create</li> <li>crud.files.edit</li></ul></li> <li>Modificar modelo <strong>app\Models\Agcliente.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token comment">// Filtro para clientes referidos</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeRol</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	≡
+    <span class="token comment">// Clientes con el rol German Fleitas</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'German-Fleitas'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token variable">$query</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'German Fleitas'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+≡
+</code></pre></div></li> <li>Modificar controlador <strong>app\Http\Controllers\TreeController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">TreeController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">tree</span><span class="token punctuation">(</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol Mujica-Coto</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol German Fleitas</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'German-Fleitas'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token variable">$autorizado</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'German Fleitas'</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$autorizado</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token variable">$existe</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDPersona'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>store</strong> del controlador <strong>app\Http\Controllers\AgclienteController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">store</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;Mujica-Coto&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;Mujica y Coto Abogados&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Creando persona en agcliente</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>index</strong> del conrolador <strong>app\Http\Controllers\Controller.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'German-Fleitas'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Cliente'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$IDCliente</span> <span class="token operator">=</span> <span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token property">passport</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'arboles.tree'</span><span class="token punctuation">,</span> <span class="token function">compact</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Subir cambios a GitHub
+<ul><li>$ git add .</li> <li>$ git commit -m &quot;Módulo German Fleitas&quot;</li> <li>$ git push -u origin master</li></ul></li></ol> <h2 id="modulo-soma-consultores"><a href="#modulo-soma-consultores" class="header-anchor">#</a> Módulo Soma Consultores</h2> <ol><li>Crear rol <strong>Soma-Consultores</strong>.</li> <li>Otorgarle los siguientes permisos al rol <strong>Soma-Consultores</strong>:
+<ul><li>genealogista</li> <li>crud.agclientes.index</li> <li>crud.agclientes.create</li> <li>crud.agclientes.edit</li> <li>crud.agclientes.destroy</li> <li>crud.files.index</li> <li>crud.files.create</li> <li>crud.files.edit</li></ul></li> <li>Modificar modelo <strong>app\Models\Agcliente.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token comment">// Filtro para clientes referidos</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeRol</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	≡
+    <span class="token comment">// Clientes con el rol Soma Consultores</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Soma-Consultores'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token variable">$query</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Soma Consultores'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+≡
+</code></pre></div></li> <li>Modificar controlador <strong>app\Http\Controllers\TreeController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">TreeController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">tree</span><span class="token punctuation">(</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol German Fleitas</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol Soma Consultores</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Soma-Consultores'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token variable">$autorizado</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'Soma Consultores'</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$autorizado</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token variable">$existe</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDPersona'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>store</strong> del controlador <strong>app\Http\Controllers\AgclienteController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">store</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;Mujica-Coto&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;Mujica y Coto Abogados&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Creando persona en agcliente</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>index</strong> del conrolador <strong>app\Http\Controllers\Controller.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Soma-Consultores'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Cliente'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$IDCliente</span> <span class="token operator">=</span> <span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token property">passport</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'arboles.tree'</span><span class="token punctuation">,</span> <span class="token function">compact</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Subir cambios a GitHub
+<ul><li>$ git add .</li> <li>$ git commit -m &quot;Módulo Soma Consultores&quot;</li> <li>$ git push -u origin master</li></ul></li></ol> <h2 id="modulo-mg-tours"><a href="#modulo-mg-tours" class="header-anchor">#</a> Módulo MG Tours</h2> <ol><li>Crear rol <strong>MG-Tours</strong>.</li> <li>Otorgarle los siguientes permisos al rol <strong>MG-Tours</strong>:
+<ul><li>genealogista</li> <li>crud.agclientes.index</li> <li>crud.agclientes.create</li> <li>crud.agclientes.edit</li> <li>crud.agclientes.destroy</li> <li>crud.files.index</li> <li>crud.files.create</li> <li>crud.files.edit</li></ul></li> <li>Modificar modelo <strong>app\Models\Agcliente.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token comment">// Filtro para clientes referidos</span>
+<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">scopeRol</span><span class="token punctuation">(</span><span class="token variable">$query</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	≡
+    <span class="token comment">// Clientes con el rol MG Tours</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'MG-Tours'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token variable">$query</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'MG Tours'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+≡
+</code></pre></div></li> <li>Modificar controlador <strong>app\Http\Controllers\TreeController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code>≡
+<span class="token keyword">class</span> <span class="token class-name-definition class-name">TreeController</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">tree</span><span class="token punctuation">(</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol Soma Consultores</span>
+		≡
+		<span class="token comment">// Si el usuario tiene el rol MG Tours</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">Auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'MG-Tours'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token variable">$autorizado</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'referido'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'MG Tours'</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span>
+				<span class="token operator">-&gt;</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$autorizado</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token variable">$existe</span> <span class="token operator">=</span> <span class="token class-name static-context">Agcliente</span><span class="token operator">::</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'LIKE'</span><span class="token punctuation">,</span><span class="token variable">$IDCliente</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDPersona'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		≡
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>store</strong> del controlador <strong>app\Http\Controllers\AgclienteController.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">store</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Request</span> <span class="token variable">$request</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$referido</span> <span class="token operator">==</span> <span class="token string double-quoted-string">&quot;MG-Tours&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$referido</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;MG Tours&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Creando persona en agcliente</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Modificar el método <strong>index</strong> del conrolador <strong>app\Http\Controllers\Controller.php</strong>:<div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    ≡
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'MG-Tours'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'crud.agclientes.index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">hasRole</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Cliente'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$IDCliente</span> <span class="token operator">=</span> <span class="token class-name static-context">Auth</span><span class="token operator">::</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token property">passport</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'arboles.tree'</span><span class="token punctuation">,</span> <span class="token function">compact</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'IDCliente'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ≡
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>Subir cambios a GitHub
+<ul><li>$ git add .</li> <li>$ git commit -m &quot;Módulo MG Tours&quot;</li> <li>$ git push -u origin master</li></ul></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/laravel/sefar2021/sefar2021-P04.html" class="prev">
+        Proyecto App Sefar Universal 2021 (Parte IV)
+      </a></span> <span class="next"><a href="/guide/laravel/sefar2021/sefar2021-P06.html">
+        Proyecto App Sefar Universal 2021 (Parte VI)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.651ff1a6.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/18.678266c7.js" defer></script>
+  </body>
+</html>
