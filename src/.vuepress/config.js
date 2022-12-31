@@ -81,6 +81,13 @@ module.exports = {
           ]
         },
         {
+          title: 'Lógica',
+          collapsable: true,
+          children: [
+            'logica/numeros2022/numeros2022-P01'    // Ejercicios de lógica matemática
+          ]
+        },
+        {
           title: 'PWA',
           collapsable: true,
           children: [
@@ -104,34 +111,3 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
   ]
 }
-
-/*
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Soluciones++',
-          collapsable: true,
-          children: [
-            '',
-          ]
-        },
-        {
-          title: 'Laravel',
-          collapsable: true,
-          children: [
-            'sefar2022',    // Proyecto Sefar 2022
-            'sefar2021',    // Proyecto App Sefar Universal (Proyecto Sefar 2021)
-            'laravel2021'   // Curso Laravel 8 desde cero
-          ]
-        },
-        {
-          title: 'Herramientas',
-          collapsable: true,
-          children: [
-            'docker2022',   // Curso práctico de Docker y Microservicios (apto para todos)
-            'pwa2022'       // PWA - Aplicaciones Web Progresivas: De cero a experto
-          ]
-        },
-      ],
-    }
-*/

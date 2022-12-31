@@ -22,6 +22,35 @@
     + $ git push -u origin main
 
 
+## Utilidades
+::: tip Enlaces de interes
++ **[Cómo Desplegar Laravel con Docker en Ubuntu 18.04](https://help.clouding.io/hc/es/articles/360010679999-C%C3%B3mo-Desplegar-Laravel-con-Docker-en-Ubuntu-18-04)**.
+:::
+::: tip Comando Docker comunes
+Para eliminar todos los contenedores:
++ $ docker stop $(docker ps -a -q)
++ $ docker rm $(docker ps -a -q)
+Para eliminar todos las imagenes:
++ $ docker rmi $(docker images -q)
+Iniciar un contenedor:
++ $ docker run nombre_del_contenedor
+Listar contenedores:
++ $ docker ps
+Detener un contendor:
++ $ docker stop id_del_contenedor
+Eliminar un contenedor:
++ $ docker rm nombre_o_id_del_contenedor
+Listar imágenes:
++ $ docker images
+Eliminar una imagen:
++ $ docker rmi nombre_de_la_imagen
+Descargar una imagen:
++ $ docker pull nombre_de_la_imagen
+Ejecutar un comando sobre un contenedor:
++ $ docker exec nombre_o_id_del_contenedor comando_a_ejecutar
+:::
+
+
 ## Sección 1: Introducción general
 ### 1. Importancia: Qué problemas resuelve Docker
 ### 2. Historia breve: Máquinas virtuales y Docker
@@ -810,89 +839,490 @@ Para crear nuestra propia network **my-bridge-network**:
 
 ## Sección 9: Proyecto Node + MongoDB
 ### 48. Repaso general
-7 min
-Reproducir
+### 49. Construir imagen Node App
++ **[Repositorio demo-node-app](https://github.com/JCarlosR/demo-node-app)**.
+1. Clonar repositorio **demo-node-app**:
+    + $ git clone https://github.com/JCarlosR/demo-node-app.git
+2. Crear imagen:
+    + $ cd demo-node-app
+    + $ docker build -t my-node-app:1.0 .
 
+### 50. Ejecutar App en un contenedor
+1. Ejecutar contenedor:
+    + $ docker run -d -p 8082:3000 --rm my-node-app:1.0
+2. Parar contenedor ejecutado en el paso anterior.
 
+### 51. Ejecutar Mongo DB en un contenedor
++ **[Docker Hub MongoDB](https://hub.docker.com/_/mongo)**.
+1. Crear network **network_mongo**:
+    + $ docker network create network_mongo
+2. Levantar un contenedor con MongoDB:
+    + $ docker run -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --network network_mongo --name mongodb --rm -d mongo
 
+### 52. Ejecutar Mongo Express en un contenedor
++ **[Docker Hub Mongo Express](https://hub.docker.com/_/mongo-express)**.
+1. Crear un contenedor de Mongo Express:
+    + $ docker run --network network_mongo -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password -e ME_CONFIG_MONGODB_SERVER=mongodb -p 8081:8081 -d mongo-express
+    ::: tip Nota
+    Mongo Express se estará ejecutando en:
+    + http://localhost:8081
+    :::
+2. Ingresando en **http://localhost:8081** crear:
+    + Base de datos **my-db**.
+    + El la base de datos **my-db** crear colección: **users**
 
+### 53. Ejecutar todo (múltiples comandos)
+1. Ejecutar contenedor:
+    + $ docker run -d -p 8082:3000 --network network_mongo --rm my-node-app:1.0
+    ::: tip Nota
+    El proyecto de Node.js se estará ejecutando en:
+    + http://localhost:8082
+    :::
 
+### 54. Docker Compose y YAML
+1. Pasos a tener en cuenta para programar un Docker Compose:
+    ```
+    docker build -t my-node-app:1.0 .
 
-+ **[]()**.
-+ **[]()**.
-    ```sh
+    docker network create network_mongo
+
+    docker run 
+        -e MONGO_INITDB_ROOT_USERNAME=admin 
+        -e MONGO_INITDB_ROOT_PASSWORD=password 
+        --network network_mongo 
+        --name mongodb 
+        mongo
+
+    docker run 
+        -e ME_CONFIG_MONGODB_SERVER=mongodb 
+        -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin 
+        -e ME_CONFIG_MONGODB_ADMINPASSWORD=password 
+        -p 8081:8081 
+        --network network_mongo 
+        -name mongo-express
+        mongo-express
+
+    docker run 
+        -p 8082:3000 
+        --network network_mongo 
+        --rm my-node-app:1.0
+    ```
+2. Modificar **demo-node-app\docker-compose.yaml**:
+    ```yaml
+    version: '3'
+    services:
+    my-node-app:
+        build: .
+        ports:
+            - 8082:3000
+    mongodb:
+        image: mongo
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=admin
+            - MONGO_INITDB_ROOT_PASSWORD=password
+        volumes:
+            - mongo-data:/data/db
+    mongo-express:
+        image: mongo-express
+        ports:
+            - 8081:8081
+        environment:
+            - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+            - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+            - ME_CONFIG_MONGODB_SERVER=mongodb
+    volumes:
+        mongo-data:
+            driver: local  
     ```
 
-
-
-
-
-
-### 49. Construir imagen Node App
-10 min
-Reproducir
-### 50. Ejecutar App en un contenedor
-6 min
-Reproducir
-### 51. Ejecutar Mongo DB en un contenedor
-7 min
-Reproducir
-### 52. Ejecutar Mongo Express en un contenedor
-4 min
-Reproducir
-### 53. Ejecutar todo (múltiples comandos)
-5 min
-Reproducir
-### 54. Docker Compose y YAML
-16 min
-Reproducir
 ### 55. Ejecutar todo (1 comando Docker Compose)
-6 min
-Reproducir
++ **[Overview](https://docs.docker.com/compose/install)**.
+1. Ubicados en **demo-node-app**, ejecutar:
+    + $ docker-compose up
+    ::: tip Nota
+    Este comando buscará un archivo de nombre **docker-compose.yaml**.
+    :::
+3. Para detener los contenedores ejecutados por Docker Compose:
+    + $ docker-compose down
+4. Para ver los volumenes en Docker:
+    + $ docker volume ls
 
 
 ## Sección 10: Docker Orchestration
-56. Introducción e Importancia
-6 min
-Reproducir
-57. Docker Swarm
-5 min
-Reproducir
-58. Kubernetes
-7 min
-Iniciar
-Cuestionario 4: Prueba 4: Container Orchestration
-Reproducir
-59. Docker Compose File
-14 min
-Reproducir
-60. Docker Compose Up
-8 min
-Reproducir
-61. Agregando un servicio más
-6 min
-Reproducir
-62. Introducción general
-5 min
-Reproducir
-63. Repositorio del proyecto
-8 min
-Reproducir
-64. Iniciando todos los servicios
-9 min
-Reproducir
-65. Introducción general
-3 min
-Reproducir
-66. Repositorio del proyecto
-10 min
-Reproducir
-67. Ejercicio final y fin del curso
-10 min
+### 56. Introducción e Importancia
+### 57. Docker Swarm
+### 58. Kubernetes
+### Cuestionario 4: Prueba 4: Container Orchestration
++ **Pregunta 1**: Acerca de **Kubernetes** y **Docker**. Es cierto que:
+    + Están relacionados pero no siempre se usan en conjunto.
++ **Pregunta 2**: ¿Cuál es la principal diferencia entre **Docker Swarm** y **Kubernetes**?
+    + Dokcer Swarm ofrece mayor simplicidad y por tanto es más fácil empezar con esta herramienta. Kubernetes presenta más características pero incrementa la complejidad de configuración.
++ **Pregunta 3**: ¿Qué es **K8s**?
+    + Kubernetes se puede abreviar como k8s porque entre la k y la s encontramos 8 caracteres.
++ **Pregunta 4**: En **Kubernetes**, ¿qué es un **Pod**?
+    + Los nodos de Kubernetes contienen pods. Cada pod puede representar a uno o varios contenedores.
++ **Pregunta 5**: En Kubernetes, se le conoce como "**Node Agent**" y está a cargo de informar al Kubernetes Master sobre el estado de pods y contenedores.
+    + Kubelet
++ **Pregunta 6**: Es una herramienta de línea de comandos que nos va a permitir gestionar los clusters de Kubernetes.
+    + kubectl
 
 
-https://www.udemy.com/course/aws-curso-basico-programadores-autodidactas/
-https://www.udemy.com/course/wordpress-desde-cero-gratis-hasta-crear-una-pagina-web/
-https://www.udemy.com/course/tienda-en-linea-con-wordpress-y-woocommerce-guia-completa/
-https://www.udemy.com/course/master-en-wordpress-desde-cero-hasta-experto/
-https://www.udemy.com/course/hazte-un-pro-con-elementor-free-wordpress-2020/
+## Sección 11: Proyecto Wordpress
+### 59. Docker Compose File
++ **[Docker Hub WordPress](https://hub.docker.com/_/wordpress)**.
++ **[Docker Hub MySQL](https://hub.docker.com/_/mysql)**.
++ **[Docker Hub phpMyAdmin](https://hub.docker.com/_/phpmyadmin)**.
+1. Crear **demo-compose-wordpress\docker-compose.yml**:
+    ```yml
+    version: '3'
+
+    services:
+    db:
+        image: mysql:8
+        volumes:
+            - db_data:/var/lib/mysql
+        restart: always
+        environment:
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: wordpress
+        MYSQL_USER: admin
+        MYSQL_PASSWORD: password
+    wp:
+        image: wordpress:php7.4
+        depends_on:
+            - db
+        ports:
+            - 8080:80
+        restart: always
+        volumes:
+            - ./:/var/www/html
+        environment:
+        WORDPRESS_DB_HOST: db
+        WORDPRESS_DB_USER: admin
+        WORDPRESS_DB_PASSWORD: password
+        WORDPRESS_DB_NAME: wordpress    
+    ```
+
+### 60. Docker Compose Up
+1. Modificar **demo-compose-wordpress\docker-compose.yml**:
+    ```yml{29-30}
+    version: '3'
+
+    services:
+    db:
+        image: mysql:8
+        volumes:
+            - db_data:/var/lib/mysql
+        restart: always
+        environment:
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: wordpress
+        MYSQL_USER: admin
+        MYSQL_PASSWORD: password
+    wp:
+        image: wordpress:php7.4
+        depends_on:
+            - db
+        ports:
+            - 8080:80
+        restart: always
+        volumes:
+            - ./:/var/www/html
+        environment:
+        WORDPRESS_DB_HOST: db
+        WORDPRESS_DB_USER: admin
+        WORDPRESS_DB_PASSWORD: password
+        WORDPRESS_DB_NAME: wordpress
+
+    volumes:
+    db_data:    
+    ```
+
+### 61. Agregando un servicio más
++ **[Docker Hub phpMyAdmin](https://hub.docker.com/_/phpmyadmin)**.
+1. Modificar **demo-compose-wordpress\docker-compose.yml**:
+    ```yml{}
+    ```
+2. Levantar servicios:
+    + $ docker-compose up -d
+    ::: tip Nota
+    El servidor web (WordPress) deberá correr en:
+    + http://localhost:8080
+    El servidor de base de datos (MySQL) deberá correr en:
+    + http://localhost:8081
+    :::
+3. Ir a **http://localhost:8080** en instalar WordPress.
+
+
+## Sección 12: Proyecto Laravel
+### 62. Introducción general
++ **[How To Install and Set Up Laravel with Docker Compose on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-set-up-laravel-with-docker-compose-on-ubuntu-22-04)**.
++ **[How To Install and Set Up Laravel with Docker Compose on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-set-up-laravel-with-docker-compose-on-ubuntu-20-04)**.
+
+### 63. Repositorio del proyecto
++ **[Repositorio GitHub travellist-laravel-demo](https://github.com/do-community/travellist-laravel-demo)**.
+::: tip Nota
+En el archivo **docker-compose.yml** del repositorio podemos ver la estructura y configuración del proyecto:
+```yml
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: sammy
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: travellist
+    container_name: travellist-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - travellist
+
+  db:
+    image: mysql:5.7
+    container_name: travellist-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+    networks:
+      - travellist
+
+  nginx:
+    image: nginx:alpine
+    container_name: travellist-nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d
+    networks:
+      - travellist
+
+networks:
+  travellist:
+    driver: bridge
+```
+:::
+
+### 64. Iniciando todos los servicios
+1. Crear proyecto a partir del repositorio **https://github.com/do-community/travellist-laravel-demo**:
+    + $ git clone https://github.com/do-community/travellist-laravel-demo
+    + $ cd travellist-laravel-demo
+    + $ docker-compose up -d
+    + $ docker-compose exec app composer install
+        ::: tip Nota
+        **app** es el nombre del servicio definido en **docker-compose.yml**.
+        :::
+2. Tomando como referencia **travellist-laravel-demo\\.env.example** crear el archivo de variables **travellist-laravel-demo\\.env**:
+    ```env
+    APP_NAME=Travellist
+    APP_ENV=dev
+    APP_KEY=
+    APP_DEBUG=true
+    APP_URL=http://localhost:8000
+
+    LOG_CHANNEL=stack
+
+    DB_CONNECTION=mysql
+    DB_HOST=db
+    DB_PORT=3306
+    DB_DATABASE=travellist
+    DB_USERNAME=travellist_user
+    DB_PASSWORD=password
+
+    BROADCAST_DRIVER=log
+    CACHE_DRIVER=file
+    QUEUE_CONNECTION=sync
+    SESSION_DRIVER=cookie
+    SESSION_LIFETIME=120
+
+    REDIS_HOST=127.0.0.1
+    REDIS_PASSWORD=null
+    REDIS_PORT=6379
+
+    MAIL_DRIVER=smtp
+    MAIL_HOST=smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME=null
+    MAIL_PASSWORD=null
+    MAIL_ENCRYPTION=null
+
+    AWS_ACCESS_KEY_ID=
+    AWS_SECRET_ACCESS_KEY=
+    AWS_DEFAULT_REGION=us-east-1
+    AWS_BUCKET=
+
+    PUSHER_APP_ID=
+    PUSHER_APP_KEY=
+    PUSHER_APP_SECRET=
+    PUSHER_APP_CLUSTER=mt1
+
+    MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+    MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+    ```
+::: tip Nota
+La aplicación se ejecutará en:
++ http://localhost:8000
+:::
+3. Crear llave:
+    + $ docker-compose exec app php artisan key:generate
+4. Parar el servicio y reiniciarlo para que tome los valores de las variables de entorno:
+    + $ docker-compose down
+    + $ docker-compose up -d
+
+## Sección 13: Python Redis PostgreSQL Node .NET
+### 65. Introducción general
++ **[Repositorio GitHub example-voting-app](https://github.com/dockersamples/example-voting-app)**.
+
+### 66. Repositorio del proyecto
+::: tip Nota
+En el archivo **docker-compose.yml** del repositorio podemos ver la estructura y configuración del proyecto:
+```yml
+# version is now using "compose spec"
+# v2 and v3 are now combined!
+# docker-compose v1.27+ required
+
+services:
+  vote:
+    build: ./vote
+    # use python rather than gunicorn for local dev
+    command: python app.py
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck: 
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    volumes:
+     - ./vote:/app
+    ports:
+      - "5000:80"
+    networks:
+      - front-tier
+      - back-tier
+
+  result:
+    build: ./result
+    # use nodemon rather than node for local dev
+    entrypoint: nodemon server.js
+    depends_on:
+      db:
+        condition: service_healthy 
+    volumes:
+      - ./result:/app
+    ports:
+      - "5001:80"
+      - "5858:5858"
+    networks:
+      - front-tier
+      - back-tier
+
+  worker:
+    build:
+      context: ./worker
+    depends_on:
+      redis:
+        condition: service_healthy 
+      db:
+        condition: service_healthy 
+    networks:
+      - back-tier
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - "./healthchecks:/healthchecks"
+    healthcheck:
+      test: /healthchecks/redis.sh
+      interval: "5s"
+    networks:
+      - back-tier
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - "db-data:/var/lib/postgresql/data"
+      - "./healthchecks:/healthchecks"
+    healthcheck:
+      test: /healthchecks/postgres.sh
+      interval: "5s"
+    networks:
+      - back-tier
+
+  # this service runs once to seed the database with votes
+  # it won't run unless you specify the "seed" profile
+  # docker compose --profile seed up -d
+  seed:
+    build: ./seed-data
+    profiles: ["seed"]
+    depends_on:
+      vote:
+        condition: service_healthy 
+    networks:
+      - front-tier
+    restart: "no"
+
+volumes:
+  db-data:
+
+networks:
+  front-tier:
+  back-tier:
+```
+En **example-voting-app/vote/Dockerfile** del repositorio podemos ver como se construirá la imagen **vote**:
+```
+# Using official python runtime base image
+FROM python:3.9-slim
+
+# add curl for healthcheck
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set the application directory
+WORKDIR /app
+
+# Install our requirements.txt
+COPY requirements.txt /app/requirements.txt
+RUN pip install -r requirements.txt
+
+# Copy our code from the current folder to /app inside the container
+COPY . .
+
+# Make port 80 available for links and/or publish
+EXPOSE 80
+
+# Define our command to be run when launching the container
+CMD ["gunicorn", "app:app", "-b", "0.0.0.0:80", "--log-file", "-", "--access-logfile", "-", "--workers", "4", "--keep-alive", "0"]
+```
+:::
+
+### 67. Ejercicio final y fin del curso
+1. Crear proyecto a partir del repositorio **https://github.com/dockersamples/example-voting-app**:
+    + $ git clone https://github.com/dockersamples/example-voting-app
+    + $ cd example-voting-app
+    + $ docker-compose up -d
+::: tip Nota
+La aplicación se ejecutará en:
++ http://localhost:5000     (Para votar)
++ http://localhost:5001     (Para ver resultados)
+:::
