@@ -36,6 +36,90 @@
 + **Solución**: La respuesta correcta es la **(A), 8 veces**. El cubo pequeño tiene lado 1 dm y volumen 1 dm<sup>3</sup>, mientras que el grande tiene lado 2 dm y volumen 2<sup>3</sup> = 8 dm<sup>3</sup>.
 <hr/>
 
++ **Problema 4**. ¿Cuántos números de cuatro cifras son divisibles entre 5 y tienen los cuatro dígitos impares?
+    + **(A)** 900; 
+    + **(B)** 625; 
+    + **(C)** 125; 
+    + **(D)** 250; 
+    + **(E)** 100
++ **Solución**: La respuesta correcta es la **(C), 125**. La cifra de las unidades debe ser 5 y cada una de las tres primeras puede escogerse independientemente de 5 maneras (1, 3, 5, 7 ó 9), por lo tanto la respuesta es 5<sup>3</sup> = 125.
+<hr/>
+
++ **Problema 5**. El director de una empresa dijo: “Cada uno de nuestros empleados tiene al menos 25 años de edad”. Luego se comprobó que no había dicho la verdad. Esto significa que:
+    + **(A)** Todos los empleados de la empresa tienen exactamente 25 años de edad.
+    + **(B)** Todos los empleados de la empresa tienen más de 26 años de edad.
+    + **(C)** Ningún empleado de la empresa tiene todavía 25 años de edad.
+    + **(D)** Algún empleado de la empresa tiene menos de 25 años de edad.
+    + **(E)** Algún empleado de la empresa tiene exactamente 26 años de edad.
++ **Solución**: La respuesta correcta es la **(D)**. Si no es cierto que cada empleado tiene al menos 25 años, entonces alguno de ellos tiene menos de 25 años.
+<hr/>
+
++ **Problema 6**. En una caja de 5 × 5 hay siete barras de 3×1, como muestra la figura. Se desea deslizar algunas barras de modo que quede espacio para una barra adicional. ¿Cuántas barras hay que mover, como mínimo?
+
+    ![figura002](https://raw.githubusercontent.com/petrix12/numeros2022/main/imagenes/figura002.png)
+
+    + **(A)** 2; 
+    + **(B)** 3; 
+    + **(C)** 4; 
+    + **(D)** 5; 
+    + **(E)** Es imposible.
++ **Solución**: La respuesta correcta es la **(B)**. Hay que bajar la barra vertical en la columna de la izquierda y luego mover hacia la izquierda las barras horizontales de la fila superior y la que está debajo de ella.
+<hr/>
+
++ **Problema 7**. ABC es un triángulo rectángulo, M es el punto medio de la hipotenusa AB y ∠BAC = 60°. Entonces ∠BMC es igual a:
+
+    ![figura003](https://raw.githubusercontent.com/petrix12/numeros2022/main/imagenes/figura003.png)
+
+    + **(A)** 105°;
+    + **(B)** 110°;
+    + **(C)** 108°;
+    + **(D)** 125°;
+    + **(E)** 120°.
++ **Solución**: La respuesta correcta es la **(E)**. Como ∠ACB = 90°, C pertenece a la circunferencia de centro M y radio MA, de donde MC = MA y por lo tanto ∠MCA = ∠MAC = 60°. Se sigue que ∠BMC = 120° por ser ángulo exterior del △MCA.
+<hr/>
+
++ **Problema 8**. Escoja un número que pueda ser igual al número de aristas de algún prisma.
+    + **(A)** 100;
+    + **(B)** 200;
+    + **(C)** 2008;
+    + **(D)** 2009;
+    + **(E)** 2010.
++ **Solución**: Si la base de un prisma tiene n lados, el prisma tiene 3n aristas. De las opciones dadas, sólo 2010 es múltiplo de 3, y por eso **(E)** es la respuesta correcta.
+<hr/>
+
++ **Problema 9**. Para cuántos números de dos dígitos xy se cumple la igualdad (x − 3)<sup>2</sup> + (y − 2)<sup>2</sup> = 0?
+    + **(A)** 1
+    + **(B)** 2
+    + **(C)** 6
+    + **(D)** 32
+    + **(E)** para ninguno.
++ **Solución**: Una suma de cuadrados es 0 si y sólo si ambos sumandos son 0, por lo tanto la igualdad se verifica solamente si x = 3 y y = 2, es decir para el 32. La respuesta correcta es la **(D)**.
+<hr/>
+
++ **Problema 10**. En la figura, la longitud del lado del cuadrado es 2, las semicircunferencias pasan por el centro del cuadrado y tienen sus centros en los vértices del cuadrado, y los círculos sombreados tienen centros en los lados del cuadrado y son tangentes a las semicircunferencias. ¿Cuánto vale el área sombreada?
+
+    ![figura004](https://raw.githubusercontent.com/petrix12/numeros2022/main/imagenes/figura004.png)
+
+    + **(A)** π;
+    + **(B)** √2π;
+    + **(C)** (√3/4)π;
+    + **(D)** 4(3 − 2√2)π;
+    + **(E)** (1/4)π.
+
++ **Solución**: La respuesta correcta es la **(D)**. El radio de las semicircunferencias es la semidiagonal del cuadrado, es decir √2. El diámetro de los círculos sombreados es entonces 2√2 − 2 y el área de esos cuatro círculos es 4(√2 − 1)<sup>2</sup>π = 4(3 − 2√2)π.
+<hr/>
+
++ **Problema 11**. Los tres números √7, <sup>3</sup>√7 y <sup>6</sup>√7 son términos consecutivos de una
+progresión geométrica. El siguiente término de la progresión es:
+    + **(A)** 1; 
+    + **(B)** <sup>12</sup>√7; 
+    + **(C)** <sup>10</sup>√7; 
+    + **(D)** <sup>9</sup>√7; 
+    + **(E)** <sup>5</sup>√7.
++ **Solución**: La respuesta correcta es la **(A)**. La razón de la progresión es <sup>3</sup>√7/√7 = 1/<sup>6</sup>√7, por lo tanto el cuarto término es <sup>6</sup>√7/<sup>6</sup>√7 = 1.
+<hr/>
+
+
 
 ## Prueba Regional - Prueba de Quinto Año (37)
 
