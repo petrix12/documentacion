@@ -119,6 +119,26 @@ progresión geométrica. El siguiente término de la progresión es:
 + **Solución**: La respuesta correcta es la **(A)**. La razón de la progresión es <sup>3</sup>√7/√7 = 1/<sup>6</sup>√7, por lo tanto el cuarto término es <sup>6</sup>√7/<sup>6</sup>√7 = 1.
 <hr/>
 
++ **Problema 12**. La cuerda AB es tangente a la menor de dos circunferencias concéntricas. Si AB = 16, ¿cuál es el área de la región sombreada?
+
+    ![figura005](https://raw.githubusercontent.com/petrix12/numeros2022/main/imagenes/figura005.png)
+
+    + **(A)** 32π;
+    + **(B)** 63π;
+    + **(C)** 64π;
+    + **(D)** 32π<sup>2</sup>;
+    + **(E)** Depende del radio de los círculos.
++ **Solución**: La respuesta correcta es la **(C)**. Sea O el centro de las circunferencias y C el punto de tangencia de la cuerda AB con la circunferencia menor. Entonces, por Pitágoras, OB<sup>2</sup> −OC<sup>2</sup> = BC<sup>2</sup> = 8<sup>2</sup> = 64 y el área sombreada es OB<sup>2</sup>π −OC<sup>2</sup>π = (OB<sup>2</sup> − OC<sup>2</sup>)π = 64π.
+<hr/>
+
++ **Problema 13**. Los números enteros x e y satisfacen 2x = 5y. Sólo uno de los siguientes números puede ser x + y. ¿Cuál?
+    + **(A)** 2011;
+    + **(B)** 2010;
+    + **(C)** 2009;
+    + **(D)** 2008;
+    + **(E)** 2007.
++ **Solución**: Como 2(x + y) = 2x + 2y = 5y + 2y = 7y, x + y debe ser múltiplo de 7. De los números listados sólo 2009 = 287 · 7 lo es y por lo tanto la respuesta correcta es la **(C)**. De hecho x = 287 · 5, y = 287 · 2 cumplen las condiciones del problema.
+<hr/>
 
 
 ## Prueba Regional - Prueba de Quinto Año (37)

@@ -64,6 +64,13 @@ module.exports = {
           ]
         },
         {
+          title: 'Herramientas',
+          collapsable: true,
+          children: [
+            'herramientas/zapier2022/zapier2022'    // Curso se Zapier 2022
+          ]
+        },
+        {
           title: 'Laravel',
           collapsable: true,
           children: [
