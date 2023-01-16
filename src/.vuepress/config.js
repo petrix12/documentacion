@@ -57,6 +57,13 @@ module.exports = {
           ]
         },
         {
+          title: 'AWS',
+          collapsable: true,
+          children: [
+            'aws/aws2023/aws2023-P01.md'    // Curso básico de AWS para desarrolladores web
+          ]
+        },
+        {
           title: 'Docker',
           collapsable: true,
           children: [
@@ -91,7 +98,8 @@ module.exports = {
           title: 'Lógica',
           collapsable: true,
           children: [
-            'logica/numeros2022/numeros2022-P01'    // Ejercicios de lógica matemática
+            'logica/numeros2022/numeros2022-P01',           // Ejercicios de lógica matemática
+            'logica/programacion2023/programacion2023-P01'      // Ejercicios de programación
           ]
         },
         {
