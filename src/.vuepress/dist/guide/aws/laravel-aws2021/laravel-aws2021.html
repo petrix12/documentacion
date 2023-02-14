@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aprende a instalar Laravel 8 en Amazon Web Services | Docs S++</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/petrix12/imagenes2022/main/Soluciones%2B%2B/S%2B%2B.ico">
+    <meta name="description" content="Documentación General">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.73d0500b.css" as="style"><link rel="preload" href="/assets/js/app.99e194c4.js" as="script"><link rel="preload" href="/assets/js/2.63c13255.js" as="script"><link rel="preload" href="/assets/js/13.32652b16.js" as="script"><link rel="prefetch" href="/assets/js/10.30d6fda3.js"><link rel="prefetch" href="/assets/js/11.39f71485.js"><link rel="prefetch" href="/assets/js/12.b1d220f7.js"><link rel="prefetch" href="/assets/js/14.bc603a87.js"><link rel="prefetch" href="/assets/js/15.ca5eb4d6.js"><link rel="prefetch" href="/assets/js/16.999fee66.js"><link rel="prefetch" href="/assets/js/17.8be46701.js"><link rel="prefetch" href="/assets/js/18.f888f43e.js"><link rel="prefetch" href="/assets/js/19.cfc5651c.js"><link rel="prefetch" href="/assets/js/20.c0b3f6b7.js"><link rel="prefetch" href="/assets/js/21.67b3029d.js"><link rel="prefetch" href="/assets/js/22.216618b4.js"><link rel="prefetch" href="/assets/js/23.be205c22.js"><link rel="prefetch" href="/assets/js/24.5eb8f2a1.js"><link rel="prefetch" href="/assets/js/25.0906d804.js"><link rel="prefetch" href="/assets/js/26.51cd84d9.js"><link rel="prefetch" href="/assets/js/27.263599a1.js"><link rel="prefetch" href="/assets/js/28.a4a70a41.js"><link rel="prefetch" href="/assets/js/29.eb1991da.js"><link rel="prefetch" href="/assets/js/3.8f343ae9.js"><link rel="prefetch" href="/assets/js/30.3127a39f.js"><link rel="prefetch" href="/assets/js/31.1235f033.js"><link rel="prefetch" href="/assets/js/32.1136ffd3.js"><link rel="prefetch" href="/assets/js/33.fe324fa6.js"><link rel="prefetch" href="/assets/js/34.0afad1fb.js"><link rel="prefetch" href="/assets/js/35.4706b85f.js"><link rel="prefetch" href="/assets/js/36.3565fa23.js"><link rel="prefetch" href="/assets/js/37.cea91192.js"><link rel="prefetch" href="/assets/js/38.e19839de.js"><link rel="prefetch" href="/assets/js/39.a6658ea6.js"><link rel="prefetch" href="/assets/js/4.832274fd.js"><link rel="prefetch" href="/assets/js/5.e457cf98.js"><link rel="prefetch" href="/assets/js/6.8d81f0ec.js"><link rel="prefetch" href="/assets/js/7.159f2f50.js"><link rel="prefetch" href="/assets/js/8.4ecdf95d.js"><link rel="prefetch" href="/assets/js/9.6a63ad8e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.73d0500b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Docs S++</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guías
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Doc
+</a></div><div class="nav-item"><a href="https://github.com/petrix12" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Mi GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guías
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  Doc
+</a></div><div class="nav-item"><a href="https://github.com/petrix12" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Mi GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Soluciones++</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>AWS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/aws/aws2023/aws2023-P01.html" class="sidebar-link">AWS Curso Básico para desarrolladores web</a></li><li><a href="/guide/aws/laravel-aws2021/laravel-aws2021.html" aria-current="page" class="active sidebar-link">Aprende a instalar Laravel 8 en Amazon Web Services</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/aws/laravel-aws2021/laravel-aws2021.html#seccion-1-introduccion" class="sidebar-link">Sección 1: Introducción</a></li><li class="sidebar-sub-header"><a href="/guide/aws/laravel-aws2021/laravel-aws2021.html#seccion-2-aws-ec2" class="sidebar-link">Sección 2: AWS EC2</a></li><li class="sidebar-sub-header"><a href="/guide/aws/laravel-aws2021/laravel-aws2021.html#seccion-3-aws-rds" class="sidebar-link">Sección 3: AWS RDS</a></li><li class="sidebar-sub-header"><a href="/guide/aws/laravel-aws2021/laravel-aws2021.html#seccion-4-configuracion-de-dominio" class="sidebar-link">Sección 4: Configuración de dominio</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>C/C++</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Herramientas</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Laravel</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Lógica</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>PWA</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="aprende-a-instalar-laravel-8-en-amazon-web-services"><a href="#aprende-a-instalar-laravel-8-en-amazon-web-services" class="header-anchor">#</a> Aprende a instalar Laravel 8 en Amazon Web Services</h1> <ul><li>Curso: https://www.udemy.com/course/aprende-a-instalar-laravel-8-en-amazon-web-services</li> <li>Repositorio GitHub: https://github.com/petrix12/awsejemplo.git</li></ul> <h2 id="seccion-1-introduccion"><a href="#seccion-1-introduccion" class="header-anchor">#</a> Sección 1: Introducción</h2> <h3 id="video-01-crear-un-proyecto-de-laravel"><a href="#video-01-crear-un-proyecto-de-laravel" class="header-anchor">#</a> Video 01. Crear un proyecto de Laravel</h3> <ol><li>Crear un proyecto de Laravel:
+<ul><li>$ laravel new awsejemplo</li></ul></li> <li>Instalar Jetstream al proyecto:
+<ul><li>$ composer require laravel/jetstream</li></ul></li> <li>Instalar livewire:
+<ul><li>$ php artisan jetstream:install livewire</li></ul></li> <li>Crear base de datos <strong>awsejemplo</strong> con phpMyAdmin.</li> <li>Ejecutar migraciones:
+<ul><li>$ php artisan migrate</li></ul></li> <li>Ejecutar:
+<ul><li>$ npm install</li> <li>$ npm run dev</li></ul></li></ol> <h3 id="video-2-subir-el-proyecto-a-github"><a href="#video-2-subir-el-proyecto-a-github" class="header-anchor">#</a> Video 2. Subir el proyecto a GitHub</h3> <ol><li>Ir a https://github.com (Crea una cuenta si aún no la tienes)</li> <li>Crear un nuevo repositorio y nombrarlo <strong>awsejemplo</strong>.</li> <li>Descargar e instalar <strong>Git</strong> en https://git-scm.com.</li> <li>En local ejecutar:
+<ul><li>$ git init</li> <li>$ git add .</li> <li>$ git commit -m &quot;Primer commit&quot;</li> <li>$ git remote add origin https://github.com/petrix12/awsejemplo.git</li> <li>git branch -M main</li> <li>git push -u origin main</li></ul></li></ol> <h2 id="seccion-2-aws-ec2"><a href="#seccion-2-aws-ec2" class="header-anchor">#</a> Sección 2: AWS EC2</h2> <h3 id="video-3-lanzar-instancia-en-ec2"><a href="#video-3-lanzar-instancia-en-ec2" class="header-anchor">#</a> Video 3. Lanzar instancia en EC2</h3> <ol><li>Ir a https://aws.amazon.com/es</li> <li>Ir a <strong>Mi cuenta</strong> &gt; <strong>Consola de administración de AWS</strong> e iniciar sesión.</li> <li>Ir al servicio <strong>EC2</strong> y dar clic en <strong>Instancias New</strong>.</li> <li>Dar clic en el botón de <strong>Lanzar instancia</strong>.</li> <li>Seleccionar:
+<ul><li>Ubuntu Server 18.04 LTS (HVM), SSD Volume Type - ami-0747bdcabd34c712a (64 bits x86) / ami-08353a25e80beea3e (64 bits Arm)</li></ul></li> <li>Seleccionar el de tipo t2.micro (Apto para capa gratuita).<div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Para una aplicación real no debe bajar de t2.medium</p></div></li> <li>Dar clic en el botón:
+<ul><li>Siguiente: Página Configuración de los detalles de la instancia</li></ul> <div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Dejar todo como está.</p></div></li> <li>Dar clic en el botón:
+<ul><li>Siguiente: Adición de almacenamiento</li> <li>Establecer <strong>Tamaño (GiB)</strong> en <strong>30</strong></li></ul></li> <li>Dar clic en el botón:
+<ul><li>Siguiente: Agregar etiquetas</li></ul> <div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Dejar todo como está.</p></div></li> <li>Dar clic en el botón:
+<ul><li>Siguiente: Página Configure Security Group
+Y ajustar parámetros:</li> <li>Dejar regla: <strong>SSH</strong></li> <li>Añadir regla: <strong>HTTP</strong></li> <li>Añadir regla: <strong>HTTPS</strong></li> <li>Para la regla <strong>SSH</strong> establecer <strong>Origen</strong> como <strong>Mi IP</strong></li> <li>Para las reglas <strong>HTTP</strong> y <strong>HTTPS</strong> establecer <strong>Origen</strong> como <strong>Cualquier lugar</strong></li></ul></li> <li>Dar clic en el botón:
+<ul><li>Revisar y lanzar</li></ul> <div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Dejar todo como está.</p></div></li> <li>Dar clic en el botón:
+<ul><li>Lanzar
+Y luego:</li> <li>Seleccionar: Crear un nuevo par de claves</li> <li>Nombre del par de claves: awsejemplo</li> <li>Dar clic en el botón: Descargar par de claves<div class="custom-block tip"><p class="custom-block-title">Nota</p> <ul><li>Guardar en un lugar seguro y evitar que se suba a GitHub.</li> <li>Para este ejemplo lo guarderé en una carpeta dentro del proyecto: awsejemplo.pem, y editare el archivo <strong>.gitignore</strong> para evitar que se incluya en los repositorios.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+awsejemplo.pem 
+</code></pre></div> <p></p></div></li> <li>Dar clic en el botón: <strong>Lanzar instancias</strong>.</li></ul></li> <li>Dar clic en el botón:
+<ul><li>Ver instancias</li></ul></li></ol> <h3 id="video-4-conectarnos-a-la-instancia-via-ssh"><a href="#video-4-conectarnos-a-la-instancia-via-ssh" class="header-anchor">#</a> Video 4. Conectarnos a la instancia vía SSH</h3> <ol><li>Para los sistemas operativos Mac o Linux ejecutar:
+<ul><li>$ chmod 400 awsejemplo.pem</li></ul></li> <li>Para el sistema operativo Windows:
+<ul><li>Ubicar el archivo <strong>awsejemplo.pem</strong> en disco, presionar sobre el el botón derecho y dar clic en <strong>Propiedades</strong>.</li> <li>Seleccionar la pestaña de <strong>Seguridad</strong>.</li> <li>Presionar el botón: <strong>Opciones avanzadas</strong>.</li> <li>Presionar el botón: <strong>Deshabilitar herencia</strong>.</li> <li>Dar clic: <strong>Quitar todos los permisos heredados de este objeto</strong>.</li> <li>Copiar el nombre del <strong>Propietario</strong> que está entre los parentisis: DESKTOP-PETRIX\Pedro Bazo</li> <li>Presionar el botón: <strong>Agregar</strong>.</li> <li>Dar clic: <strong>Seleccionar una entidad de seguridad</strong>.</li> <li>En <strong>Escriba el nombre de objeto para seleccionar</strong> escribrie el nombre copiado en los pasos anteriores.</li> <li>Presionar el botón: <strong>Comprobar nombres</strong>.</li> <li>Presionar el botón: <strong>Aceptar</strong>.</li> <li>Verificar que los permisos que tienen que estar habilitados son:
+<ul><li>Lectura y ejecución</li> <li>Lectura</li></ul></li> <li>Presionar el botón: <strong>Aceptar</strong>.</li> <li>Presionar el botón: <strong>Aceptar</strong>.</li> <li>Presionar el botón: <strong>Aceptar</strong>.</li></ul></li> <li>En el navegador ingresar a la instancias presionando abajo de <strong>ID de la instancia</strong> y dar clic en el botón <strong>Conectar</strong>.</li> <li>Ir a <strong>Cliente SSH</strong> y copiar el comando de ejemplo: ssh -i &quot;awsejemplo.pem&quot; ubuntu@ec2-100-25-148-222.compute-1.amazonaws.com</li> <li>En local ejecutar (en la ruta que se encuentre el archivo <strong>awsejemplo.pem</strong>):
+<ul><li>$ ssh -i &quot;awsejemplo.pem&quot; ubuntu@ec2-100-25-148-222.compute-1.amazonaws.com</li></ul></li> <li>A la pregunta: Are you sure you want to continue connecting (yes/no/[fingerprint])?
+<ul><li>Respondemos: yes</li></ul> <div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Con esta acción hemos ingresado en el servidor de AWS.</p></div></li></ol> <h3 id="video-5-configurar-nuestro-servidor"><a href="#video-5-configurar-nuestro-servidor" class="header-anchor">#</a> Video 5. Configurar nuestro servidor</h3> <ol><li>En la terminal del servidor de AWS:
+<ul><li>Actualizar servidor:
+<ul><li>$ sudo apt-get update</li> <li>$ sudo apt-get upgrade</li> <li>Cuando pregunte: Do you want to continue? [Y/n]
+<ul><li>Responder: y</li></ul></li></ul></li> <li>Actualizar nuevamente el servidor:
+<ul><li>$ sudo apt-get update</li></ul></li> <li>Configurar entorno para ejecutar Laravel:
+<ul><li>$ sudo apt-get install software-properties-common</li> <li>$ sudo add-apt-repository ppa:ondrej/php</li> <li>Cuando pregunte: Press [ENTER] to continue or Ctrl-c to cancel adding it.
+<ul><li>Presionamos ENTER.</li></ul></li> <li>Actualizar nuevamente el servidor:
+<ul><li>$ sudo apt-get update</li></ul></li> <li>Instalar php:
+<ul><li>$ sudo apt-get install php7.4</li> <li>Cuando pregunte: Do you want to continue? [Y/n]
+<ul><li>Responder: y</li></ul></li></ul></li> <li>Instalar el servidor apache:
+<ul><li>$ sudo apt-get install apache2</li> <li>$ sudo apt-get install libapache2-mod-php7.4</li></ul> <div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Para ver la versión de php: $ php -v</p></div></li> <li>Para saber los modulos instalados en php:
+<ul><li>$ php -m</li></ul> <div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Constrastar contra https://laravel.com/docs/8.x/deployment#server-requirements y verificar cuales son necesarias.</p></div></li> <li>Instalar extensiones de php necesarias para Laravel:
+<ul><li>$ sudo apt-get install php7.4-bcmath</li> <li>$ sudo apt-get install php7.4-mbstring
+<ul><li>En: Do you want to continue? [Y/n]
+Responder: y</li></ul></li> <li>$ sudo apt-get install php7.4-xml</li></ul></li> <li>Instalar paquetes que necesitaremos más adelante:
+<ul><li>$ sudo apt-get install unzip</li> <li>$ sudo apt-get install php7.4-zip
+<ul><li>En: Do you want to continue? [Y/n]
+Responder: y</li></ul></li> <li>$ sudo apt-get install php7.4-mysql</li> <li>$ sudo apt-get install php7.4-curl</li></ul></li></ul></li></ul></li> <li>En el navegador:
+<ul><li>Ir: <strong>Servicios</strong> &gt; <strong>EC2</strong> &gt; <strong>Recursos</strong> &gt; <strong>Instancias</strong>.</li> <li>Seleccionar nuestra instancia en ejecución.</li> <li>Ubicar: Dirección IPv4 pública: 100.24.116.157<div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Esta es la dirección de nuestro sitio web.</p></div></li></ul></li> <li>En la terminal del servidor de AWS:
+<ul><li>Reiniciar el servidor apache:
+<ul><li>$ sudo service apache2 restart</li></ul></li> <li>Para verificar que no tengamos ningún error:
+<ul><li>$ sudo service apache2 status</li></ul></li> <li>Habilitar el modulo rewrite
+<ul><li>$ sudo a2enmod rewrite</li></ul></li> <li>Reiniciar el servidor apache:
+<ul><li>$ sudo service apache2 restart</li></ul></li> <li>Definir punto de acceso a nuestra aplicación web:
+<ul><li>Ingresar a la ruta: /var/www/html
+<ul><li>$ cd /var/www/html<div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Para ver los archivos contenidos en una ruta:</p> <ul><li>$ ls
+<p></p></li></ul></div></li></ul></li> <li>Editar el archivo index.html:
+<ul><li>$ sudo nano index.html</li> <li>Cambiar la etiqueta title del head por:<div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Hola<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li> <li>Para guardar, presionar:
+<ul><li>Ctrl + X</li> <li>y</li> <li>ENTER</li></ul></li></ul></li> <li>Editar archivo de configuración de punto de acceso:
+<ul><li>$ sudo nano /etc/apache2/sites-enabled/000-default.conf</li> <li>Cambiar línea:
+<ul><li>DocumentRoot /var/www/html
+Por:</li> <li>DocumentRoot /var/www/awsejemplo/public</li></ul></li> <li>Para guardar, presionar:
+<ul><li>Ctrl + X</li> <li>y</li> <li>ENTER</li></ul></li></ul></li></ul></li> <li>Reiniciar el servidor apache:
+<ul><li>$ sudo service apache2 restart</li></ul></li></ul></li></ol> <h3 id="video-6-instalar-composer"><a href="#video-6-instalar-composer" class="header-anchor">#</a> Video 6. Instalar Composer</h3> <ol><li>Copiar de la página: https://getcomposer.org/download, el bloque de <strong>Command-line installation</strong>:<div class="language- extra-class"><pre class="language-text"><code>php -r &quot;copy('https://getcomposer.org/installer', 'composer-setup.php');&quot;
+php -r &quot;if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;&quot;
+php composer-setup.php
+php -r &quot;unlink('composer-setup.php');&quot;
+</code></pre></div></li> <li>En la terminal del servidor de AWS pegar las líneas de comandos que acabamos de copiar y presionar ENTER.</li> <li>Realizar la instalación global de composer:
+<ul><li>$ sudo mv composer.phar /usr/local/bin/composer</li></ul> <div class="custom-block tip"><p class="custom-block-title">Nota</p> <ul><li>Este comando se encuentra en https://getcomposer.org/doc/00-intro.md</li> <li>Para comprobar que tenemos instalado composer, ejecutar:
+<ul><li>$ composer
+<p></p></li></ul></li></ul></div></li></ol> <h3 id="video-7-clonar-nuestro-repositorio-de-git"><a href="#video-7-clonar-nuestro-repositorio-de-git" class="header-anchor">#</a> Video 7. Clonar nuestro repositorio de Git</h3> <ol><li>Ir a la ruta <strong>/var/www</strong>:
+<ul><li>$ cd /var/www</li></ul></li> <li>Clonar el repositorio del proyecto:
+<ul><li>$ sudo git clone https://github.com/petrix12/awsejemplo.git</li></ul></li> <li>Ir a la ruta <strong>/var/www/awsejemplo</strong>:
+<ul><li>$ cd /var/www/awsejemplo</li></ul></li> <li>Para poder instalar las dependencias de composer, ejecutar:
+<ul><li>$ sudo chown -R ubuntu:www-data .</li></ul></li> <li>Ejecutar permisos para la carpeta de laravel:
+<ul><li>$ chmod -R 755 .</li> <li>$ chmod -R 777 ./storage</li></ul></li> <li>Instalar composer:
+<ul><li>$ composer install</li></ul></li> <li>Crear el archivo <strong>.env</strong> a partir de <strong>.env.example</strong>:
+<ul><li>$ cp .env.example .env</li></ul></li> <li>Generar llave del proyecto:
+<ul><li>$ php artisan key:generate</li></ul></li> <li>Instalar NodeJs:
+<ul><li>$ sudo apt install nodejs
+<ul><li>Do you want to continue? [Y/n]
+Responder: y</li></ul></li></ul></li> <li>Para ver la versión de NodeJs:
+<ul><li>$ nodejs -v</li></ul></li> <li>Actualizar NodeJs:
+<ul><li>$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -</li></ul></li> <li>Ejecutar:
+<ul><li>$ sudo apt-get install -y nodejs</li></ul></li> <li>Para ver la versión de npm:
+<ul><li>$ npm -v</li></ul></li> <li>Ejecutar:
+<ul><li>$ npm install</li> <li>$ npm run dev</li></ul></li> <li>Para editar <strong>.env</strong>:
+<ul><li>$ nano .env</li></ul></li></ol> <h2 id="seccion-3-aws-rds"><a href="#seccion-3-aws-rds" class="header-anchor">#</a> Sección 3: AWS RDS</h2> <h3 id="video-8-creacion-de-la-base-de-datos"><a href="#video-8-creacion-de-la-base-de-datos" class="header-anchor">#</a> Video 8. Creación de la base de Datos</h3> <ol><li>En la página de AWS buscar el servicio RDS:
+<ul><li>https://console.aws.amazon.com/rds/home?region=us-east-1</li> <li>Dar clic en el botón: <strong>Crear base de datos</strong>.</li> <li>En <strong>Elegir un método de creación de base de datos</strong>:
+<ul><li>Seleccionar la opción: <strong>Creación estándar</strong>.</li></ul></li> <li>En <strong>Opciones del motor</strong>:
+<ul><li>Seleccionar la opción: <strong>MariaDB</strong>.</li> <li>Seleccionar la versión: <strong>MariaDB 10.5.8</strong>.</li></ul></li> <li>En <strong>Plantillas</strong>:
+<ul><li>Seleccionar la opción: <strong>Capa gratuita</strong>.</li></ul></li> <li>En <strong>Configuración</strong> &gt; <strong>Identificador de instancias de bases de datos</strong>:
+<ul><li>Escribir: awsejemplo-db</li></ul></li> <li>En <strong>Configuración</strong> &gt; <strong>Configuración de credenciales</strong> &gt; <strong>Nombre de usuario maestro</strong>:
+<ul><li>Escribir: awsejemplo_usr</li></ul></li> <li>En <strong>Configuración</strong> &gt; <strong>Configuración de credenciales</strong> &gt; <strong>Generación automática de contraseña</strong>: Seleccionar.</li> <li>En <strong>Conectividad</strong> &gt; <strong>Acceso público</strong>: Seleccionar <strong>Si</strong>.</li> <li>En <strong>Configuración adicional</strong> &gt; <strong>Opciones de base de datos</strong> &gt; <strong>Nombre de base de datos inicial</strong>:
+<ul><li>Escribir: awsejemplo_db</li></ul></li> <li>Presionar botón: <strong>Crear base de datos</strong>.</li> <li>Cuando finalice la creación de la base de datos, presionar el botón: <strong>View credential details</strong>.<div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Anotar credenciales en un lugar seguro</p></div></li></ul></li></ol> <h3 id="video-9-editar-los-security-group"><a href="#video-9-editar-los-security-group" class="header-anchor">#</a> Video 9. Editar los &quot;Security Group&quot;</h3> <ol><li>En la página de AWS seleccionar la base de datos <strong>awsejemplo-db</strong>: <strong>Amazon RDS</strong> &gt; <strong>Databases</strong>.</li> <li>Seleccionar <strong>Conectividad y seguridad</strong> &gt; <strong>Seguridad</strong> &gt; <strong>Grupos de seguridad de la VPC</strong> &gt; default (sg-09f6e23a).</li> <li>Seleccionar <strong>Grupos de seguridad</strong> &gt; <strong>ID del grupo de seguridad</strong> &gt; sg-09f6e23a</li> <li>Seleccionar <strong>Reglas de entrada</strong> y presionar botón <strong>Edit inbound rules</strong>.</li> <li>Presionar el botón <strong>Agregar regla</strong> y seleccionar el tipo <strong>MySQL/Aurora</strong> y seleccionar como origen <strong>Mi IP</strong>.</li> <li>Presionar botón <strong>Guardar reglas</strong>.</li></ol> <h3 id="video-10-conectar-con-mysql-workbench"><a href="#video-10-conectar-con-mysql-workbench" class="header-anchor">#</a> Video 10. Conectar con MySQL Workbench</h3> <ol><li>Ir a https://www.mysql.com/products/workbench</li> <li>Presionar el botón <strong>Download Now »</strong>.</li> <li>En la siguiente página presionar el botón <strong>Download</strong> y luego en el enlace <strong>No thanks, just start my download</strong>.</li> <li>Instalar <strong>MySQL Workbench</strong>.</li> <li>En <strong>MySQL Workbench</strong>:
+<ul><li>Seleccionar <strong>Database</strong> &gt; <strong>Manage Connections...</strong>.</li> <li>En el cuadro de diálogo <strong>Manage Server Connections</strong> suministrar la siguiente información:
+<ul><li>Presionar botón: New</li> <li>Connection Name: awsejemplo</li> <li>Hostname: awsejemplo-db.cgfry9dn7zav.us-east-1.rds.amazonaws.com
+<ul><li>Es el punto de enlace que aparece en la página de AWS: RDS &gt; Databases &gt; awsejemplo-db</li></ul></li> <li>Port: 3306</li> <li>Username: awsejemplo_usr</li> <li>Password: ************</li></ul></li> <li>Presionar botón: <strong>Test Connection</strong> para comprobar el estado de la conección.</li> <li>Presionar botón: <strong>Close</strong>.</li> <li>Seleccionar <strong>Database</strong> &gt; <strong>Connect to Database</strong>.</li> <li>En el cuadro de diálogo <strong>Connect to Database</strong> seleccionamos la conección <strong>awsejemplo</strong> y presionamos el botón <strong>OK</strong>.</li></ul></li></ol> <h3 id="video-11-configurar-las-credenciales-en-laravel"><a href="#video-11-configurar-las-credenciales-en-laravel" class="header-anchor">#</a> Video 11. Configurar las credenciales en Laravel</h3> <ol><li>En la terminal de AWS ir a la ruta <strong>/var/www/awsejemplo</strong>:
+<ul><li>$ cd /var/www/awsejemplo</li></ul></li> <li>En la terminal de AWS editar el archivo <strong>.env</strong>:
+<ul><li>$ nano .env</li></ul></li> <li>Modificar los siguientes parámetros en el archivo <strong>.env</strong>:
+<ul><li>DB_HOST=awsejemplo-db.cgfry9dn7zav.us-east-1.rds.amazonaws.com<div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Este valor se encuentra en la página de AWS en: RDS &gt; Databases &gt; awsejemplo-db</p> <ul><li>Conectividad y seguridad -&gt; Punto de enlace y puerto -&gt; Punto de enlace
+<p></p></li></ul></div></li> <li>DB_DATABASE=awsejemplo_db</li> <li>DB_USERNAME=awsejemplo_usr</li> <li>DB_PASSWORD=*************</li></ul></li> <li>Para guardar el archivo <strong>.env</strong>:
+<ul><li>$ Ctrl + X</li> <li>$ y</li> <li>$ ENTER</li></ul></li> <li>Para verificar que podemos establecer una conexión con la base de datos, ir a la terminal AWS y ejecutar:
+<ul><li>$ php artisan tinker</li> <li>'&gt;&gt;&gt; DB::connection()-&gt;getPdo();</li></ul> <div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Si el resultado de la ejecución es parecida a la que se muestra a continuación es que logramos establecer la conexión:</p> <div class="language- extra-class"><pre class="language-text"><code>=&gt; PDO {#3608
+    inTransaction: false,
+    attributes: {
+    CASE: NATURAL,
+    ERRMODE: EXCEPTION,
+    AUTOCOMMIT: 1,
+    PERSISTENT: false,
+    DRIVER_NAME: &quot;mysql&quot;,
+    SERVER_INFO: &quot;Uptime: 13883  Threads: 8  Questions: 27672  Slow queries: 0  Opens: 214  Flush tables: 1  Open tables: 9  Queries per second avg: 1.993&quot;,
+    ORACLE_NULLS: NATURAL,
+    CLIENT_VERSION: &quot;mysqlnd 7.4.21&quot;,
+    SERVER_VERSION: &quot;5.5.5-10.4.18-MariaDB-log&quot;,
+    STATEMENT_CLASS: [
+        &quot;PDOStatement&quot;,
+    ],
+    EMULATE_PREPARES: 0,
+    CONNECTION_STATUS: &quot;awsejemplo-db.cgfry9dn7zav.us-east-1.rds.amazonaws.com via TCP/IP&quot;,
+    DEFAULT_FETCH_MODE: BOTH,
+    },
+}
+</code></pre></div></div></li> <li>Salir de tinker:
+<ul><li>'&gt;&gt;&gt; Ctrl + C</li></ul></li> <li>Ejecutar las migraciones en la terminal de AWS:
+<ul><li>$ php artisan migrate</li></ul></li></ol> <h3 id="video-12-fix-configuracion-del-servidor"><a href="#video-12-fix-configuracion-del-servidor" class="header-anchor">#</a> Video 12. Fix: Configuración del servidor</h3> <ol><li>Ingresar al archivo de configuración de apache en la terminal de AWS:
+<ul><li>$ sudo nano /etc/apache2/apache2.conf</li></ul></li> <li>Comentar las siguientes líneas con #:<div class="language- extra-class"><pre class="language-text"><code># User ${APACHE_RUN_USER}
+# Group ${APACHE_RUN_GROUP}
+</code></pre></div></li> <li>A continuación agregar las líneas:<div class="language- extra-class"><pre class="language-text"><code>User ubuntu
+Group ubuntu
+</code></pre></div></li> <li>Cambiar el siguiente bloque de códgio:<div class="language- extra-class"><pre class="language-text"><code>&lt;Directory /var/www/&gt;
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+&lt;/Directory&gt;
+</code></pre></div>Por:<div class="language- extra-class"><pre class="language-text"><code>&lt;Directory /var/www/&gt;
+        Options Indexes FollowSymLinks
+        AllowOverride All 
+        Require all granted
+&lt;/Directory&gt;
+</code></pre></div></li> <li>Para guardar los cambios:
+<ul><li>$ Ctrl + X</li> <li>$ y</li> <li>$ ENTER</li></ul></li> <li>Habilitar modo rewrite:
+<ul><li>$ sudo a2enmod rewrite</li></ul></li> <li>Reiniciar el servidor de apache:
+<ul><li>$ sudo service apache2 restart</li></ul></li> <li>Para ver el estatus del servidor apache:
+<ul><li>$ sudo service apache2 status</li></ul></li></ol> <h2 id="seccion-4-configuracion-de-dominio"><a href="#seccion-4-configuracion-de-dominio" class="header-anchor">#</a> Sección 4: Configuración de dominio</h2> <h3 id="video-13-servicio-route-53"><a href="#video-13-servicio-route-53" class="header-anchor">#</a> Video 13. Servicio Route 53</h3> <ol><li>Crear un dominio con tu servicio de hosting. En mi caso utilizaré GoDaddy:
+<ul><li>Ingresar al hosting de GoDaddy:
+<ul><li>https://a2plcpnl0082.prod.iad2.secureserver.net:2083/</li></ul></li> <li>Ir a <strong>DOMINIOS</strong> &gt; <strong>Dominios</strong>.</li> <li>Presionar el botón: <strong>CREATE NEW DOMAIN</strong>.</li> <li>Introducir un nombre para el dominio:
+<ul><li>Nombre: prueba.sefar.com</li> <li>No seleccionar raíz en el servidor de GoDaddy.</li></ul></li> <li>Presionar el botón: <strong>ENVIAR</strong>.
+<ul><li>Esta operación puede tardar hasta más de 48 horas.</li></ul></li></ul></li> <li>En la cuenta de AWS ingresar al servico de <strong>Route 53</strong>.</li> <li>Ir a <strong>Panel de Route 53</strong> &gt; <strong>Administración de DNS</strong> y presionar el botón: <strong>Crear una zona alojada</strong>.</li> <li>En el formaulario <strong>Crear una zona alojada</strong> completar los siguientes campos:
+<ul><li>Nombre de dominio: prueba.sefar.com</li> <li>Descripción - opcional: Prueba de alojamiento de un proyecto Laravel 8 en AWS</li> <li>Tipo: Zona alojada pública</li></ul></li> <li>Presionar el botón: <strong>Crear una zona alojada</strong>.</li> <li>Copiar los nameservers proporcionandos por AWS en tu proveedor de servicios:
+<ul><li>ns-55.awsdns-06.com</li> <li>ns-1889.awsdns-44.co.uk</li> <li>ns-792.awsdns-35.net</li> <li>ns-1087.awsdns-07.org<div class="custom-block tip"><p class="custom-block-title">Nota</p> <ul><li>No añadir el punto final que aparece an la página al final del nameserver.</li> <li>Este proceso puede tardar hasta 24 horas en verse reflejado.
+<p></p></li></ul></div></li></ul></li></ol> <h3 id="video-14-implementar-un-certificado-ssl"><a href="#video-14-implementar-un-certificado-ssl" class="header-anchor">#</a> Video 14. Implementar un certificado SSL</h3> <ol><li>En la cuenta de AWS ir al servicio de AWS <strong>Certificate Manager</strong>.</li> <li>En <strong>Aprovisionar certificados</strong> presionar el botón <strong>Empezar</strong>.</li> <li>Seleccionar <strong>Solicitar un certificado público</strong> y presionar botón <strong>Solicitar un certificado</strong>.</li> <li>En <strong>Agregar nombres de dominio</strong> agregar los siguientes nombre:
+<ul><li>prueba.sefar.com</li> <li>www.prueba.sefar.com</li> <li>*.www.prueba.sefar.com</li></ul></li> <li>Presionar el botón <strong>Siguiente</strong>.</li> <li>En <strong>Seleccionar un método de validación</strong>, seleccionar <strong>Validación de DNS</strong> y presionar el botón <strong>Siguiente</strong>.</li> <li>En <strong>Agregar etiquetas</strong> lo dejamos como está y presionar el botón <strong>Revisar</strong>.</li> <li>En <strong>Revisar</strong> presionar el botón <strong>Confirmar y solicitar</strong>.</li> <li>En Validación para cada uno de los dominios dar clic en <strong>►</strong> y luego el botón <strong>Crear registro en Route 53</strong>.</li> <li>En <strong>Crear registro en Route 53</strong> presionar el botón <strong>Crear</strong>.</li></ol> <h3 id="video-15-balanceador-de-carga"><a href="#video-15-balanceador-de-carga" class="header-anchor">#</a> Video 15. Balanceador de carga</h3> <ol><li>En la página de AWS ir al servicio <strong>EC2</strong> y <strong>Recursos</strong> seleccionar <strong>Balanceadores de carga</strong>.</li> <li>Presionar el botón <strong>Crear balanceador de carga</strong>.</li> <li>En <strong>Seleccionar un tipo de balanceador de carga</strong>, seleccionar <strong>Balanceador de carga clásico</strong> (Este balanceador ya está en desuso) y presionar el botón <strong>Crear</strong>.</li> <li>En <strong>Paso 1: Definir el balanceador de carga</strong> &gt; <strong>Configuración básica</strong> añadir los siguientes registros:
+<ul><li>HTTP</li> <li>HTTPS (HTTP Seguro)</li></ul></li> <li>Completar el campo <strong>Nombre del balanceador de carga:</strong> awsejemplo-lb y presionar el botón <strong>Siguiente: Asignar grupos de seguridad</strong>.</li> <li>En <strong>Paso 2: Asignar grupos de seguridad</strong> seleccionar el <strong>ID de grupo de seguridad</strong> que coincide con <strong>EC2</strong> &gt; <strong>Instancias</strong> &gt; <strong>i-01f753a2118350336</strong>, luego <strong>Seguridad</strong> y <strong>Grupos de seguridad</strong>.</li> <li>Presionar botón <strong>Siguiente: Configurar los ajustes de seguridad</strong>.</li> <li>En <strong>Paso 3: Configurar los ajustes de seguridad</strong> &gt; <strong>Seleccionar certificado</strong> &gt; <strong>Tipo de certificado:</strong>, seleccionar <strong>Elegir un certificado de ACM (recomendado)</strong>.</li> <li>Presionar botón <strong>Siguiente: Configurar comprobación de estado</strong>.</li> <li>En <strong>Step 4: Configure Health Check</strong>, establecer el parámetro <strong>Ping Path</strong>: /index.phpn y presionamos en <strong>Next: Add EC2 Instances</strong>.</li> <li>En <strong>Step 5: Add EC2 Instances</strong> seleccionamos la instancia que estamos trabajando y presionamos en <strong>Next: Add Tags</strong>.</li> <li>En <strong>Step 6: Add Tags</strong> lo dejamos como está y presionamos en <strong>Review and Create</strong>.</li> <li>En <strong>Step 7: Review</strong> verificamos los valores y presionamos en <strong>Create</strong>.</li></ol> <h3 id="video-16-anadir-alias-para-el-balanceador"><a href="#video-16-anadir-alias-para-el-balanceador" class="header-anchor">#</a> Video 16. Añadir Alias para el balanceador</h3> <ol><li>En AWS ir al servicio de <strong>Route 53</strong>, vamos a <strong>Zonas hospedadas</strong> y en <strong>Zonas alojadas</strong> seleccionamos la zona que hemos creado.</li> <li>Ubicados en <strong>Route 53</strong> &gt; <strong>Zonas hospedadas</strong> &gt; <strong>prueba.sefar.com</strong> presionamos en <strong>Crear un registro</strong>.</li> <li>Para los parámetros del nuevo registro:
+<ul><li>Activamos <strong>Alias</strong>.</li> <li>En <strong>Tipo de registro</strong> seleccionar: <strong>A: dirige el tráfico a una dirección IPv4 y algunos recursos de AWS</strong>.</li> <li>En <strong>Dirigir el tráfico a</strong> seleccionamos: <strong>Alias del Calssic Load Balancer y el de aplicaciones</strong>.</li> <li>En <strong>Elegir la región</strong> seleccionar la región en la que esta montado la instancia.</li> <li>Presionar el botón <strong>Crear registros</strong>.</li></ul></li> <li>Crear otro registro:</li> <li>Para los parámetros del nuevo registro:
+<ul><li>Activamos <strong>Alias</strong>.</li> <li>Nombre del registro: <strong>www</strong>.</li> <li>En <strong>Tipo de registro</strong> seleccionar: <strong>A: dirige el tráfico a una dirección IPv4 y algunos recursos de AWS</strong>.</li> <li>En <strong>Dirigir el tráfico a</strong> seleccionamos: <strong>Alias del Calssic Load Balancer y el de aplicaciones</strong>.</li> <li>En <strong>Elegir la región</strong> seleccionar la región en la que esta montado la instancia.</li> <li>El registro debe apuntar a nuestro dominio.</li> <li>Presionar el botón <strong>Crear registros</strong>.</li></ul></li> <li>Crear nuevamente otro registro, igual al paso anterior pero en nombre del registro colocamos *.</li></ol> <h3 id="video-17-¡el-gran-momento"><a href="#video-17-¡el-gran-momento" class="header-anchor">#</a> Video 17. ¡El gran momento!</h3> <ol><li>Ingresa a la terminal y escribe:
+<ul><li>$ sudo nano /etc/apache2/sites-enabled/000-default.conf</li></ul></li> <li>Al editar el archivo anterior añadir las siguientes reglas:
+<ul><li>RewriteEngine On</li> <li>RewriteCond %{HTTP:X-Forwarded-Proto} =http</li> <li>RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [L,R=permanent]<div class="custom-block tip"><p class="custom-block-title">Nota</p> <p>Añadir al final del archivo y antes del cierre de </p></div></li></ul></li> <li>Salvar el archivo:
+<ul><li>$ Ctrl + X</li> <li>$ y</li> <li>$ ENTER</li></ul></li> <li>Reiniciar el servidor de apache:
+<ul><li>$ sudo service apache2 restart</li></ul></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/aws/aws2023/aws2023-P01.html" class="prev">
+        AWS Curso Básico para desarrolladores web
+      </a></span> <span class="next"><a href="/guide/c_cpp/clases_cpp/clases_cpp2023.html">
+        Clases C++
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.99e194c4.js" defer></script><script src="/assets/js/2.63c13255.js" defer></script><script src="/assets/js/13.32652b16.js" defer></script>
+  </body>
+</html>

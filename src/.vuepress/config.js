@@ -60,7 +60,15 @@ module.exports = {
           title: 'AWS',
           collapsable: true,
           children: [
-            'aws/aws2023/aws2023-P01.md'    // Curso básico de AWS para desarrolladores web
+            'aws/aws2023/aws2023-P01.md',           // Curso básico de AWS para desarrolladores web
+            'aws/laravel-aws2021/laravel-aws2021'   // Laravel 8 en Amazon Web Services
+          ]
+        },
+        {
+          title: 'C/C++',
+          collapsable: true,
+          children: [
+            'c_cpp/clases_cpp/clases_cpp2023',           // Clases de C++
           ]
         },
         {
@@ -81,17 +89,19 @@ module.exports = {
           title: 'Laravel',
           collapsable: true,
           children: [
-            'laravel/sefar2022/sefar2022-P01',    // Proeycto Sefar 2022
+            'laravel/sefar2022/sefar2022-P01',      // Proeycto Sefar 2022
             'laravel/sefar2022/sefar2022-P02',
             'laravel/sefar2022/sefar2022-P03',
-            'laravel/sefar2021/sefar2021-P01',    // Proeycto Sefar 2021
+            'laravel/sefar2021/sefar2021-P01',      // Proeycto Sefar 2021
             'laravel/sefar2021/sefar2021-P02',
             'laravel/sefar2021/sefar2021-P03',
             'laravel/sefar2021/sefar2021-P04',
             'laravel/sefar2021/sefar2021-P05',
             'laravel/sefar2021/sefar2021-P06',
             'laravel/sefar2021/sefar2021-P07',
-            'laravel/laravel2021/laravel2021'     // Curso Laravel 8 desde cero
+            'laravel/file2021/file2021',            // Subir archivos a la red con Laravel y almacenar sus datos en MySQL
+            'laravel/multifile2021/multifile2021',  // Subir múltiples archivos en Laravel
+            'laravel/laravel2021/laravel2021'       // Curso Laravel 8 desde cero
           ]
         },
         {
