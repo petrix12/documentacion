@@ -1,4 +1,4 @@
-# Clases C++
+# Apuntes C++
 + **Autor**: Pedro Bazó
 ::: tip Enlaces de interes
   + [Repositorio GitHub](https://github.com/petrix12/cpp2023.git)
@@ -6,6 +6,7 @@
   + [Programación en C++ || Programación ATS](https://www.youtube.com/watch?v=dJzLmjSJc2c&list=PLWtYZ2ejMVJlUu1rEHLC0i_oibctkl0Vh)
   + [Compilando C/C++ desde Visual Studio Code | Windows 10](https://platzi.com/tutoriales/1469-algoritmos/2765-compilando-cc-desde-visual-studio-code-windows-10)
   + [Code::Blocks](https://www.codeblocks.org)
+  + [Linked list Data Structure](https://www.programiz.com/dsa/linked-list)
 :::
 
 
@@ -47,6 +48,306 @@ int main(){
 	return 0;
 }
 ```
+
+## Punteros
+### Definición: es una variable que almacena la dirección de memoria de otra variable
++ &n: Dirección de memoria de n
++ *n: Variable cuya dirección de memoria está almacenada en n
+
+### Ejemplo
+```cpp
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+int main(){
+    int num;
+    num = 20;
+    cout << "Valor de num: " << num << endl;
+    cout << "Dirección de memoria de num: " << &num << endl;
+
+    int* dir_num;   // Puntero que almacena una dirección de memoria que apunta a un valor tipo entero
+    dir_num = &num;
+
+    cout << "Valor de dir_num (es una dirección de memoria): " << dir_num << endl;
+    cout << "Valor del contenido de la dirección de memoria a la que apunta dir_num: " << *dir_num << endl;
+
+    int *& nn = dir_num; // Puntero que almacena una dirección de memoria que apunta a un valor tipo puntero entero
+    cout << "Valor nn: " << nn << endl;
+    cout << "Dirección de nn: " << &nn << endl;
+    cout << "Valor que almacena la direccion de memoria contenida en nn: " << *nn << endl;
+
+    getch();
+    return 0;
+}
+```
+
+### Correspondencia entre arreglos y punteros
+```cpp
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+int main(){
+    int num[] = {1,2,3,4,5};
+    int *dir_num;
+    
+	dir_num = num;	// Es lo mismo que: dir_num = &num[0]
+
+	for(int i=0; i<5; i++){
+		cout << "num[" << i << "] = " << *dir_num++ << " / Direccion de memoria: " << dir_num << endl;
+	}
+
+    getch();
+    return 0;
+}
+```
+
+### Asignación dinámica de arreglos
++ **Palabras claves**:
+	+ **new**: reserva el número de bytes solicitados por la declaración.
+	+ **delete**: libera un bloque de bytes reservado con anterioridad.
++ Ejemplo:
+	```cpp
+	#include<iostream>
+	#include<conio.h>
+	#include<stdlib.h>  // Con esta libreria funcionan los operadores new y delete
+	using namespace std;
+
+	void pedirNotas();
+	void mostrarNotas();
+	int numCalif;
+	int *calif;
+
+	int main(){
+		pedirNotas();
+		mostrarNotas();
+
+		delete[] calif; // Liberar memoria
+
+		getch();
+		return 0;
+	}
+
+	void pedirNotas() {
+		cout << "Número de calificaciones: "; cin >> numCalif;
+		calif = new int[numCalif];  // Arreglo dinámico
+		for(int i=0; i<numCalif; i++){
+			cout << "Nota "<< i+1 << ": ";
+			cin >> calif[i];
+		}
+	}
+
+	void mostrarNotas() {
+		cout << "Notas:\n";
+		for(int i=0; i<numCalif; i++){
+			cout << calif[i] << endl;
+		}
+	}	
+	```
+
+### Transmisión de direcciones de memoria
+```cpp
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+void intercambio(float *, float *);
+
+int main(){
+    float n1 = 20.8;
+    float n2 = 6.78;
+
+    cout << "n1: " << n1 << endl;
+    cout << "n2: " << n2 << endl;
+
+    intercambio(&n1, &n2);
+
+    cout << "nuevo valor n1: " << n1 << endl;
+    cout << "nuevo valor n2: " << n2 << endl;
+
+    getch();
+    return 0;
+}
+
+void intercambio(float *dir_n1, float *dir_n2) {
+    float aux;
+    aux = *dir_n1;
+    *dir_n1 = *dir_n2;
+    *dir_n2 = aux;
+}
+```
+
+
+
+
+83-90
+
+
+## Pilas
+### Pila
+Es una estructura de datos de entradas ordenadas tales que solo se pueden introducir y eliminar por un extremo, llamdo cima.
+### Operaciones usuales en una pila
++ Insertar (push)
++ Quitar (pop)
+### Forma de una pila:
+```cpp
+struct Nodo {
+	int dato;
+	Nodo *siguiente;
+}
+```
+### Insertar y quitar elementos en pila
+#### Pasos para insertar elementos en pila
+1. Crear espacio en memoria para almacenar nodo:
+	+ pila = NULL
+	+ Forma de la función:
+		```cpp
+		void agregarPila(Nodo *&pila, int n){
+			Nodo *nuevo_nodo = new Nodo();
+		}
+		``` 
+2. Cargar valor dentro del nodo (dato):
+	+ nuevo_nodo->dato = 10;
+	+ Forma de la función:
+		```cpp
+		void agregarPila(Nodo *&pila, int n){
+			Nodo *nuevo_nodo = new Nodo();
+			nuevo_nodo->dato = n;
+		}
+		``` 
+3. Cargar puntero pila dentro del nodo (*siguiente):
+	+ nuevo_nodo->siguiente = pila;
+	+ Forma de la función:
+		```cpp
+		void agregarPila(Nodo *&pila, int n){
+			Nodo *nuevo_nodo = new Nodo();
+			nuevo_nodo->dato = n;
+			nuevo_nodo->siguiente = pila;
+		}
+		``` 
+4. Asignar el nuevo nodo a pila:
+	+ pila = nuevo_nodo;
+	+ Forma de la función:
+		```cpp
+		void agregarPila(Nodo *&pila, int n){
+			Nodo *nuevo_nodo = new Nodo();	// Reservar Espacio en memoria para un nodo
+			nuevo_nodo->dato = n;			// Asignar valor al dato del nodo
+			nuevo_nodo->siguiente = pila;	// Apuntar la pila al puntero siguiente
+			pila = nuevo_nodo;				// Igualar pila al nuevo nodo
+		}
+		``` 
+
+#### Pasos para quitar elementos en pila
+1. Crear variable auxiliar de tipo Nodo:
+	+ Nodo *aux = pila;
+	+ Forma de la función:
+		```cpp
+		void sacarPila(Nodo *&pila, int &n){
+			Nodo *aux = pila;
+		}
+		``` 
+2. Igualar n a aux->dato:
+	+ n = aux->dato;
+	+ Forma de la función:
+		```cpp
+		void sacarPila(Nodo *&pila, int &n){
+			Nodo *aux = pila;
+			n = aux->dato;
+		}
+		``` 
+3. Pasar la dirección de pila al siguiente nodo:
+	+ pila = aux->siguiente;
+	+ Forma de la función:
+		```cpp
+		void sacarPila(Nodo *&pila, int &n){
+			Nodo *aux = pila;
+			n = aux->dato;
+			pila = aux->siguiente;
+		}
+		``` 
+4. Eliminar variable auxiliar:
+	+ delete aux;
+	+ Forma de la función:
+		```cpp
+		void sacarPila(Nodo *&pila, int &n){
+			Nodo *aux = pila;
+			n = aux->dato;
+			pila = aux->siguiente;
+			delete aux;
+		}
+		``` 
+
+#### Ejemplo (Insertar y quitar elementos en una pila)
+```cpp
+// Agregar y quitar elementos en una pila
+#include<iostream>
+#include<conio.h>
+#include<stdlib.h>  // Para el uso de new
+using namespace std;
+
+// Crear estructura Nodo
+struct Nodo {
+    int dato;
+    Nodo *siguiente;
+};
+
+// Prototipos agregarPila y sacarPila
+void agregarPila(Nodo *&, int);
+void sacarPila(Nodo *&, int &);
+
+int main(){
+    Nodo *pila = NULL;
+    int dato;
+    int i = 1;
+    char respuesta = 's';
+
+    cout << "*** AGREGANDO ELEMENTOS EN PILA ***" << endl;
+
+    do{
+        cout << "Dato " << i << ": "; cin >> dato;
+        agregarPila(pila, dato);
+        cout << "Dato " << i << " = " << dato << " agregado a pila" << endl;
+        cout << "¿Agregar otro dato?(s/n): "; cin >> respuesta;
+        i++;
+    }while ((respuesta == 's') || (respuesta == 'S'));
+
+    cout << "*** QUITANDO ELEMENTOS EN PILA ***" << endl;
+    while(pila != NULL){
+        sacarPila(pila, dato);
+        if(pila != NULL){
+            cout << dato << ", ";
+        }else{
+            cout << dato << "." << endl;
+        }
+    }
+
+    getch();
+    return 0;
+}
+
+// Definición agregarPila
+void agregarPila(Nodo *&pila, int n) {
+    Nodo *nuevo_nodo = new Nodo();
+    nuevo_nodo->dato = n;
+    nuevo_nodo->siguiente = pila;
+    pila = nuevo_nodo;
+}
+
+// Definición sacarPila
+void sacarPila(Nodo *&pila, int &n){
+    Nodo *aux = pila;
+    n = aux->dato;
+    pila = aux->siguiente;
+    delete aux;
+}
+```
+
+## Colas
+
+
+96-99
+
 
 ## Programación Orientada a Objeto en C++
 + **Repositorio**: https://github.com/petrix12/cpp2023/tree/main/bases_poo
@@ -815,7 +1116,8 @@ int main(){
 + **Repositorio en GitHub**: https://github.com/petrix12/cpp2023/tree/main/excepciones
 
 
-36
+
+50
 
 
 #include<conio.h>
@@ -827,7 +1129,11 @@ system("pause");
 
 
 
-try catch (e) {
-10:30 am
+
+pilas y colas
+95
+
+
+
 
 
